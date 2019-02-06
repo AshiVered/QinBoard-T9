@@ -1043,7 +1043,7 @@ public class TraditionalT9 extends InputMethodService implements
 		}
 	}
 
-	private void handleBackspace() {
+	public void handleBackspace() {
 		final int length = mComposing.length();
 		final int length2 = mComposingI.length();
 		if (mKeyMode == MODE_TEXT) {

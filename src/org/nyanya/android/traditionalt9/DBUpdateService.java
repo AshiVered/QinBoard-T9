@@ -6,6 +6,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+//import android.os.Build;
 import android.os.Handler;
 import android.util.Log;
 import android.widget.Toast;
@@ -50,15 +51,7 @@ public class DBUpdateService extends IntentService {
 		}
 		Log.d("T9DBUpdate.onHandle", "Update pass check.");
 		// do real things
-		Notification notification = new Notification(R.drawable.ime_en_lang_lower, getText(R.string.updating_database_title),
-				System.currentTimeMillis());
-		Intent notificationIntent = new Intent(this, DBUpdateService.class);
-		PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
-		notification.setLatestEventInfo(this, getText(R.string.updating_database_title),
-				getText(R.string.updating_database), pendingIntent);
-		startForeground(UPDATING_NOTIFICATION_ID, notification);
-
-
+		startForeground(UPDATING_NOTIFICATION_ID, getNotification());
 
 		//put this in a thread
 		mHandler.post(new DisplayToast(this, getText(R.string.updating_database)));
@@ -67,5 +60,27 @@ public class DBUpdateService extends IntentService {
 		dbhelper.setSQLDB(tdb);
 		mHandler.post(new DisplayToast(this, getText(R.string.updating_database_done)));
 		Log.d("T9DBUpdate.onHandle", "done.");
+	}
+
+	private Notification getNotification() {
+		Intent notificationIntent = new Intent(this, DBUpdateService.class);
+		PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
+		Notification notification;
+		/*if (Build.VERSION.SDK_INT < 23) {
+			notification = new Notification(R.drawable.ime_en_lang_lower, getText(R.string.updating_database_title),
+					System.currentTimeMillis());
+			notification.setLatestEventInfo(this, getText(R.string.updating_database_title),
+					getText(R.string.updating_database), pendingIntent);
+		} else {*/
+			Notification.Builder builder = new Notification.Builder(this);
+			builder.setSmallIcon(R.drawable.ime_en_lang_lower)
+				.setTicker(getText(R.string.updating_database_title))
+				.setWhen(System.currentTimeMillis())
+				.setContentTitle(getText(R.string.updating_database_title))
+				.setContentText(getText(R.string.updating_database))
+				.setContentIntent(pendingIntent);
+			notification = builder.build();
+		//}
+		return notification;
 	}
 }

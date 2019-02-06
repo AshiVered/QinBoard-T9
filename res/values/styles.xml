@@ -17,6 +17,18 @@
 		<!-- All customizations that are NOT specific to a particular API-level can go here. -->
 	</style>
 
+	<style name="SymbolStyle" parent="android:Widget.TextView">
+		<item name="android:layout_weight">1</item>
+		<item name="android:layout_width">0dp</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:clickable">true</item>
+		<item name="android:focusable">true</item>
+		<item name="android:gravity">center</item>
+		<item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+		<item name="android:textColor">@color/key_text</item>
+		<item name="android:textSize">30sp</item>
+	</style>
+
 	<declare-styleable name="PrefItem">
 		<attr name="title" format="string" />
 		<attr name="summary" format="string" />
