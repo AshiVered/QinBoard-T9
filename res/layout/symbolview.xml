@@ -17,17 +17,17 @@
 		<TextView
 			style="@style/SymbolStyle"
 			android:id="@+id/text_keyone"
-			android:background="@drawable/key_one" />
+			android:background="@drawable/button_symbol" />
 
 		<TextView
 			style="@style/SymbolStyle"
 			android:id="@+id/text_keytwo"
-			android:background="@drawable/key_two" />
+			android:background="@drawable/button_symbol" />
 
 		<TextView
 			style="@style/SymbolStyle"
 			android:id="@+id/text_keythree"
-			android:background="@drawable/key_three" />
+			android:background="@drawable/button_symbol" />
 
 	</LinearLayout>
 
@@ -42,17 +42,17 @@
 		<TextView
 			style="@style/SymbolStyle"
 			android:id="@+id/text_keyfour"
-			android:background="@drawable/key_four" />
+			android:background="@drawable/button_symbol" />
 
 		<TextView
 			style="@style/SymbolStyle"
 			android:id="@+id/text_keyfive"
-			android:background="@drawable/key_five" />
+			android:background="@drawable/button_symbol" />
 
 		<TextView
 			style="@style/SymbolStyle"
 			android:id="@+id/text_keysix"
-			android:background="@drawable/key_six" />
+			android:background="@drawable/button_symbol" />
 
 	</LinearLayout>
 
@@ -67,17 +67,17 @@
 		<TextView
 			style="@style/SymbolStyle"
 			android:id="@+id/text_keyseven"
-			android:background="@drawable/key_seven" />
+			android:background="@drawable/button_symbol" />
 
 		<TextView
 			style="@style/SymbolStyle"
 			android:id="@+id/text_keyeight"
-			android:background="@drawable/key_eight" />
+			android:background="@drawable/button_symbol" />
 
 		<TextView
 			style="@style/SymbolStyle"
 			android:id="@+id/text_keynine"
-			android:background="@drawable/key_nine" />
+			android:background="@drawable/button_symbol" />
 
 	</LinearLayout>
 
@@ -92,19 +92,19 @@
 		<TextView
 			style="@style/SymbolStyle"
 			android:id="@+id/text_keystar"
-			android:background="@drawable/key_star"
+			android:background="@drawable/button_symbol"
 			android:singleLine="true" />
 
 		<TextView
 			style="@style/SymbolStyle"
 			android:id="@+id/text_keyzero"
-			android:background="@drawable/key_zero"
+			android:background="@drawable/button_symbol"
 			android:textSize="30sp" />
 
 		<TextView
 			style="@style/SymbolStyle"
 			android:id="@+id/text_keypound"
-			android:background="@drawable/key_pound"
+			android:background="@drawable/button_symbol"
 			android:singleLine="true" />
 
 	</LinearLayout>

@@ -12,7 +12,7 @@
 
 	<ViewSwitcher
 		android:id="@+id/main_left"
-		android:layout_weight="2"
+		android:layout_weight="1"
 		android:layout_width="0dp"
 		android:layout_height="58dp"
 		android:layout_marginLeft="1dp"
@@ -42,7 +42,7 @@
 
 	<RelativeLayout
 		android:id="@+id/main_right"
-		android:layout_weight="2"
+		android:layout_weight="1"
 		android:layout_width="0dp"
 		android:layout_height="58dp"
 		android:layout_marginLeft="1px"
@@ -60,7 +60,35 @@
 			android:layout_marginTop="0dp"
 			layout="@layout/rbutton" />
 	</RelativeLayout>
+
+	<Button
+		android:id="@+id/main_prev_word"
+		android:layout_weight="1"
+		android:layout_width="0dp"
+		android:layout_height="58dp"
+		android:layout_marginLeft="1px"
+		android:layout_marginRight="1px"
+		android:visibility="invisible"
+		android:background="@drawable/button_custom"
+		android:focusable="false"
+		android:longClickable="true"
+		android:text="&lt;"
+		android:textColor="@color/button_text" />
 	
+	<Button
+		android:id="@+id/main_next_word"
+		android:layout_weight="1"
+		android:layout_width="0dp"
+		android:layout_height="58dp"
+		android:layout_marginLeft="1px"
+		android:layout_marginRight="1px"
+		android:visibility="invisible"
+		android:background="@drawable/button_custom"
+		android:focusable="false"
+		android:longClickable="true"
+		android:text="&gt;"
+		android:textColor="@color/button_text" />
+
 	<Button
 		android:id="@+id/main_backspace"
 		android:layout_weight="1"

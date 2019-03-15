@@ -8,7 +8,7 @@ import android.widget.ViewSwitcher;
 
 public class InterfaceHandler implements View.OnClickListener, View.OnLongClickListener {
 
-	private static final int[] buttons = { R.id.main_left, R.id.main_right, R.id.main_mid, R.id.main_backspace };
+	private static final int[] buttons = { R.id.main_left, R.id.main_right, R.id.main_mid, R.id.main_backspace, R.id.main_next_word, R.id.main_prev_word};
 	private TraditionalT9 parent;
 	private View mainview;
 
@@ -66,6 +66,11 @@ public class InterfaceHandler implements View.OnClickListener, View.OnLongClickL
 		}
 	}
 
+	protected void showScrollKeys(boolean show) {
+		int visibility = show ? View.VISIBLE : View.INVISIBLE;
+		mainview.findViewById(R.id.main_next_word).setVisibility(visibility);
+		mainview.findViewById(R.id.main_prev_word).setVisibility(visibility);
+	}
 	protected void emulateMiddleButton() {
 		((Button) mainview.findViewById(R.id.main_mid)).performClick();
 	}
@@ -100,7 +105,12 @@ public class InterfaceHandler implements View.OnClickListener, View.OnLongClickL
 			break;
 		case R.id.main_backspace:
 			parent.handleBackspace();
-			//parent.onKey(KeyEvent.KEYCODE_DEL, null);
+			break;
+		case R.id.main_next_word:
+			parent.getCandidateView().scrollSuggestion(1);
+			break;
+		case R.id.main_prev_word:
+			parent.getCandidateView().scrollSuggestion(-1);
 			break;
 		}
 	}

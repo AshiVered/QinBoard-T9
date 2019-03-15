@@ -154,6 +154,9 @@ public class TraditionalT9 extends InputMethodService implements
 		return mCandidateView;
 	}
 
+	protected CandidateView getCandidateView() {
+		return mCandidateView;
+	}
 	protected void showSymbolPage() {
 		if (mSymbolPopup == null) {
 			mSymbolPopup = new SymbolDialog(this, getLayoutInflater().inflate(R.layout.symbolview,
@@ -1000,6 +1003,7 @@ public class TraditionalT9 extends InputMethodService implements
 					mComposing.append(mSuggestionStrings.get(0));
 					if (interfacehandler != null) {
 						interfacehandler.showNotFound(false);
+						interfacehandler.showScrollKeys(true);
 					}
 				} else {
 					mWordFound = false;
@@ -1007,6 +1011,7 @@ public class TraditionalT9 extends InputMethodService implements
 					setCandidatesViewShown(false);
 					if (interfacehandler != null) {
 						interfacehandler.showNotFound(true);
+						interfacehandler.showScrollKeys(false);
 					}
 				}
 				setSuggestions(mSuggestionStrings, 0);
