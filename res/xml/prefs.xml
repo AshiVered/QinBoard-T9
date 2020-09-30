@@ -16,6 +16,12 @@
 		entryValues="@array/pref_lang_values"
 		title="@string/pref_lang_title" />
 	<SettingCheck
+		id="pref_noSoftButtons"
+		title="@string/pref_noSoftButtons"
+		summary="@string/pref_noSoftButtonsSum"
+		defaultValue="false"
+		/>
+	<SettingCheck
 		id="pref_spaceOnZero"
 		title="@string/pref_spaceOnZero"
 		summary="@string/pref_keyRemapSum"

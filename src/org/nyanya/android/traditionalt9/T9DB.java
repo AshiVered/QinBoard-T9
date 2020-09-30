@@ -28,7 +28,7 @@ public class T9DB {
 	protected boolean ready = true;
 
 	protected static final String DATABASE_NAME = "t9dict.db";
-	protected static final int DATABASE_VERSION = 4;
+	protected static final int DATABASE_VERSION = 5;
 	protected static final String WORD_TABLE_NAME = "word";
 	protected static final String SETTING_TABLE_NAME = "setting";
 	protected static final String FREQ_TRIGGER_NAME = "freqtrigger";
@@ -69,10 +69,11 @@ public class T9DB {
 			INPUT_MODE("pref_inputmode", 0, 0),
 			LANG_SUPPORT("pref_lang_support", 1, 1),
 			MODE_NOTIFY("pref_mode_notify", 0, 2),
-			LAST_LANG("set_last_lang", 1, 5),
-			LAST_WORD("set_last_word", null, 6),
+			LAST_LANG("set_last_lang", 1, 6),
+			LAST_WORD("set_last_word", null, 7),
 			SPACE_ZERO("pref_spaceOnZero", 0, 4),
-			KEY_REMAP("pref_keyMap", 0, 3);
+			KEY_REMAP("pref_keyMap", 0, 3),
+			NO_SOFTBUTTONS("pref_noSoftButtons", 0, 5);
 
 			public final String id;
 			public final Integer defvalue;
@@ -519,7 +520,8 @@ public class T9DB {
 					DBSettings.SETTING.LAST_LANG.id	+ " INTEGER, " +
 					DBSettings.SETTING.KEY_REMAP.id	+ " INTEGER, " +
 					DBSettings.SETTING.SPACE_ZERO.id	+ " INTEGER, " +
-					DBSettings.SETTING.LAST_WORD.id	+ " TEXT )");
+					DBSettings.SETTING.LAST_WORD.id	+ " TEXT, " +
+					DBSettings.SETTING.NO_SOFTBUTTONS.id + " INTEGER) " );
 		}
 
 		@Override
@@ -543,7 +545,7 @@ public class T9DB {
 						" WHERE " + COLUMN_LANG + "=0");
 				createSettingsTable(db);
 			}
-			if (oldVersion == 3) {
+			if (oldVersion <= 3) {
 				// ADDED REMAP OPTION and SPACEONZERO
 				db.execSQL("ALTER TABLE " + SETTING_TABLE_NAME + " ADD COLUMN " +
 					DBSettings.SETTING.KEY_REMAP.id + " INTEGER");
@@ -554,6 +556,15 @@ public class T9DB {
 				updatedata.put(DBSettings.SETTING.SPACE_ZERO.id, 0);
 				db.update(SETTING_TABLE_NAME, updatedata, null, null);
 			}
+			if (oldVersion <= 5) {
+				// ADDED REMAP OPTION and SPACEONZERO
+				db.execSQL("ALTER TABLE " + SETTING_TABLE_NAME + " ADD COLUMN " +
+						DBSettings.SETTING.NO_SOFTBUTTONS.id + " INTEGER");
+				ContentValues updatedata = new ContentValues();
+				updatedata.put(DBSettings.SETTING.NO_SOFTBUTTONS.id, 0);
+				db.update(SETTING_TABLE_NAME, updatedata, null, null);
+			}
+
 			onCreate(db);
 			Log.i("T9DB.onUpgrade", "Done.");
 		}

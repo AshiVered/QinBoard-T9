@@ -410,7 +410,7 @@ public class TraditionalT9Settings extends ListActivity implements
 						word = ws[0];
 						try {
 							freq = Integer.parseInt(ws[1]);
-						} catch (NumberFormatException e) {
+						} catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
 							rpl.status = false;
 							rpl.addMsg("Number error ("+fname+") at line " + linecount+". Using 0 for frequency.");
 							freq = 0;
@@ -693,7 +693,7 @@ public class TraditionalT9Settings extends ListActivity implements
 		// get settings
 		Object[] settings = T9DB.getInstance(this).getSettings(new SETTING[]
 				// Order should be based on SETTING.sqOrder
-				{SETTING.INPUT_MODE, SETTING.LANG_SUPPORT, SETTING.MODE_NOTIFY, SETTING.KEY_REMAP, SETTING.SPACE_ZERO});
+				{SETTING.INPUT_MODE, SETTING.LANG_SUPPORT, SETTING.MODE_NOTIFY, SETTING.KEY_REMAP, SETTING.SPACE_ZERO,SETTING.NO_SOFTBUTTONS});
 		ListAdapter settingitems;
 		try {
 			settingitems = new SettingAdapter(this, CustomInflater.inflate(this, R.xml.prefs, settings));

@@ -47,6 +47,7 @@ public class TraditionalT9 extends InputMethodService implements
 	private boolean keyRemap = false;
 
 	private boolean spaceOnZero = false;
+	private boolean noSoftButtons = false;
 
 	private boolean mIgnoreDPADKeyUp = false;
 	private KeyEvent mDPADkeyEvent = null;
@@ -136,6 +137,8 @@ public class TraditionalT9 extends InputMethodService implements
 		//updateKeyMode();
 		View v = getLayoutInflater().inflate(R.layout.mainview, null);
 		interfacehandler.changeView(v);
+		if (noSoftButtons)
+			interfacehandler.hideView();
 		if (mKeyMode == MODE_LANG) {
 			interfacehandler.showHold(true);
 		} else {
@@ -280,10 +283,15 @@ public class TraditionalT9 extends InputMethodService implements
 			// 0, 1, 2,
 			SETTING.LANG_SUPPORT, SETTING.LAST_LANG, SETTING.MODE_NOTIFY,
 			// 3, 4, 5
-			SETTING.INPUT_MODE, SETTING.LAST_WORD, SETTING.SPACE_ZERO
+			SETTING.INPUT_MODE, SETTING.LAST_WORD, SETTING.SPACE_ZERO,
+			// 6
+			SETTING.NO_SOFTBUTTONS
 		});
 
 		spaceOnZero = settings[5].equals(1);
+		noSoftButtons = settings[6].equals(1);
+		if (noSoftButtons)
+			spaceOnZero=true;
 		mLangsAvailable = LangHelper.buildLangs((Integer)settings[0]);
 		mLang = sanitizeLang(LANGUAGE.get((Integer)settings[1]));
 
@@ -668,7 +676,8 @@ public class TraditionalT9 extends InputMethodService implements
 				}
 			}
 
-		} else if (keyCode == KeyEvent.KEYCODE_SOFT_RIGHT) {
+		}
+		else if (keyCode == KeyEvent.KEYCODE_SOFT_RIGHT) {
 			if (interfacehandler != null) {
 				interfacehandler.setPressed(keyCode, false);
 			}
@@ -885,8 +894,14 @@ public class TraditionalT9 extends InputMethodService implements
 		} else if (keyCode == KeyEvent.KEYCODE_BACK) {
 			handleClose();
 		} else if (keyCode == KeyEvent.KEYCODE_POUND) {
-			// space
-			handleCharacter(KeyEvent.KEYCODE_POUND);
+			if (noSoftButtons )
+				if (mKeyMode == MODE_LANG && mWordFound == false)
+					showAddWord();//TODO: show add word on candidate view, not here
+				else
+					nextKeyMode();
+			else
+				// space
+				handleCharacter(KeyEvent.KEYCODE_POUND);
 		} else if (keyCode == KeyEvent.KEYCODE_SOFT_LEFT) {
 			if (mWordFound) {
 				showSymbolPage();
