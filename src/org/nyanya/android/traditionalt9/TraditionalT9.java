@@ -47,6 +47,7 @@ public class TraditionalT9 extends InputMethodService implements
 	private boolean keyRemap = false;
 
 	private boolean spaceOnZero = false;
+
 	private boolean noSoftButtons = false;
 
 	private boolean mIgnoreDPADKeyUp = false;
@@ -154,6 +155,7 @@ public class TraditionalT9 extends InputMethodService implements
 	@Override
 	public View onCreateCandidatesView() {
 		mCandidateView = new CandidateView(this);
+		mCandidateView.setAddWordOption(noSoftButtons);
 		return mCandidateView;
 	}
 
@@ -895,10 +897,7 @@ public class TraditionalT9 extends InputMethodService implements
 			handleClose();
 		} else if (keyCode == KeyEvent.KEYCODE_POUND) {
 			if (noSoftButtons )
-				if (mKeyMode == MODE_LANG && mWordFound == false)
-					showAddWord();//TODO: show add word on candidate view, not here
-				else
-					nextKeyMode();
+				nextKeyMode();
 			else
 				// space
 				handleCharacter(KeyEvent.KEYCODE_POUND);
@@ -947,7 +946,10 @@ public class TraditionalT9 extends InputMethodService implements
 		if (mComposing.length() > 0) {
 			switch (mKeyMode) {
 				case MODE_LANG:
-					commitTyped();
+					if (noSoftButtons && isAddWordOptionSelected())
+						showAddWord();
+					else
+						commitTyped();
 					break;
 				case MODE_TEXT:
 					commitTyped();
@@ -960,6 +962,10 @@ public class TraditionalT9 extends InputMethodService implements
 		} else {
 			hideWindow();
 		}
+	}
+
+	private boolean isAddWordOptionSelected() {
+		return mCandidateView.mSelectedIndex == mSuggestionStrings.size() - 1;
 	}
 
 	/**
@@ -1257,12 +1263,14 @@ public class TraditionalT9 extends InputMethodService implements
 				if (mKeyMode != MODE_NUM && mComposing.length() > 0) {
 					if (keyCode == KeyEvent.KEYCODE_DPAD_DOWN) {
 						mCandidateView.scrollSuggestion(1);
-						if (mSuggestionStrings.size() > mCandidateView.mSelectedIndex)
+
+						if (!(noSoftButtons && isAddWordOptionSelected())&&mSuggestionStrings.size() > mCandidateView.mSelectedIndex)
 							currentInputConnection.setComposingText(mSuggestionStrings.get(mCandidateView.mSelectedIndex), 1);
 						return true;
 					} else if (keyCode == KeyEvent.KEYCODE_DPAD_UP) {
 						mCandidateView.scrollSuggestion(-1);
-						if (mSuggestionStrings.size() > mCandidateView.mSelectedIndex)
+
+						if (!(noSoftButtons && isAddWordOptionSelected())&&mSuggestionStrings.size() > mCandidateView.mSelectedIndex )
 							currentInputConnection.setComposingText(mSuggestionStrings.get(mCandidateView.mSelectedIndex), 1);
 						return true;
 					} else if (keyCode == KeyEvent.KEYCODE_DPAD_LEFT || keyCode == KeyEvent.KEYCODE_DPAD_RIGHT) {
@@ -1459,5 +1467,4 @@ public class TraditionalT9 extends InputMethodService implements
 	@Override
 	public void onRelease(int primaryCode) {
 	}
-
 }

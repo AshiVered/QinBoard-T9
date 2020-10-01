@@ -67,7 +67,7 @@
     <string name="pref_nuke_warn">Attenzione: L\'intero dizionario sarà cancellato. Continuare ?</string>
     <string name="pref_nuke_title">Elimina dizionario IME </string>
     <string name="pref_reloadKeys">Ricaricamento KeyMap</string>
-
+    <string name="candidate_view_add_word">Agg.</string>
     <string name="hello_world">Ciao mondo!</string>
 
 </resources>

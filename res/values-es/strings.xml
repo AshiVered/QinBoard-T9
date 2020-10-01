@@ -68,7 +68,7 @@
 	<string name="pref_nuke_warn">Advertencia: Esto borrará todo su diccionario. ¿Desea continuar?</string>
 	<string name="pref_nuke_title">Asesinar diccionario IME</string>
 	<string name="pref_reloadKeys">Recargar KeyMap</string>
-
+	<string name="candidate_view_add_word">Agregar</string>
 	<string name="hello_world">¡Hola mundo!</string>
 
 

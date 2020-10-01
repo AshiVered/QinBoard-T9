@@ -78,6 +78,7 @@
 	<string name="pref_spaceOnZero" translatable="false">Space on 0 key</string>
 	<string name="pref_noSoftButtons" translatable="false">No soft buttons</string>
 	<string name="pref_noSoftButtonsSum" translatable="false">Not show soft buttons, implies \"Space on 0 key\" (Use # to change input mode)</string>
+	<string name="candidate_view_add_word">Add</string>
 	<string name="hello_world">Hello world!</string>
 
 </resources>

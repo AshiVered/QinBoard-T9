@@ -62,7 +62,7 @@
   <string name="pref_mode_notify">Режим індикації</string>
   <string name="database_settings_notready">База даних недоступна. Використовуюься значення за замовчуванням.</string>
   <string name="pref_reloadKeys">Перезавантажити значення клавіш</string>
-
+    <string name="candidate_view_add_word">Додати</string>
     <string name="title_activity_add_word">Додати слово</string>
     <string name="traditionalt9_settings">Налаштування Traditional T9</string>
 

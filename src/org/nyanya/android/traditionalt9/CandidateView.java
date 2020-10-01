@@ -33,12 +33,13 @@ public class CandidateView extends View {
 	private int mColorNormal;
 	private int mColorRecommended;
 	private int mColorOther;
+	private int mColorAdd;
 	private int mVerticalPadding;
 	private Paint mPaint;
 	private int mTargetScrollX;
-
+	private String mAddWordLabel;
 	private int mTotalWidth;
-
+	private boolean addWordOption;
 	Rect mPadding;
 
 	/**
@@ -56,11 +57,15 @@ public class CandidateView extends View {
 
 		Resources r = context.getResources();
 
+		mAddWordLabel=r.getString(R.string.candidate_view_add_word);
+
 		setBackgroundColor(r.getColor(R.color.candidate_background));
 
 		mColorNormal = r.getColor(R.color.candidate_normal);
 		mColorRecommended = r.getColor(R.color.candidate_recommended);
 		mColorOther = r.getColor(R.color.candidate_other);
+		mColorAdd=r.getColor(R.color.candidate_background_add);
+
 		mVerticalPadding = r.getDimensionPixelSize(R.dimen.candidate_vertical_padding);
 
 		mPaint = new Paint();
@@ -142,6 +147,8 @@ public class CandidateView extends View {
 			} else {
 				paint.setColor(mColorOther);
 			}
+			if (i==count-1)
+				paint.setColor(mColorAdd);
 
 			canvas.drawText(suggestion, x + X_GAP, y, paint);
 			paint.setColor(mColorOther);
@@ -151,6 +158,8 @@ public class CandidateView extends View {
 
 			x += wordWidth;
 		}
+
+
 		mTotalWidth = x;
 		if (mTargetScrollX != getScrollX()) {
 			scrollToTarget();
@@ -180,6 +189,8 @@ public class CandidateView extends View {
 		clear();
 		if (suggestions != null) {
 			mSuggestions = suggestions;
+			if (addWordOption)
+				mSuggestions.add(mAddWordLabel);
 			mSelectedIndex = initialSel;
 		}
 		scrollTo(0, 0);
@@ -216,6 +227,10 @@ public class CandidateView extends View {
 
 			invalidate();
 		}
+	}
+
+	public void setAddWordOption(boolean addWordOption) {
+		this.addWordOption = addWordOption;
 	}
 
 }

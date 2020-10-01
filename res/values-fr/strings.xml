@@ -67,7 +67,7 @@
 	<string name="pref_nuke_warn">Attention: Votre ditionnaire sera entièrement effacé. Voulez-vous continuer ?</string>
 	<string name="pref_nuke_title">Détruire le dictionnaire IME</string>
 	<string name="pref_reloadKeys">Forcer le rechargement de la surcharge des touches</string>
-
+	<string name="candidate_view_add_word">Aj.</string>
 	<string name="hello_world">Bonjour monde !</string>
 
 </resources>
