@@ -65,7 +65,7 @@ public class DBUpdateService extends IntentService {
 		Intent notificationIntent = new Intent(this, DBUpdateService.class);
 		PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
 		Notification notification;
-	/*	if (Build.VERSION.SDK_INT < 23) {
+		/*if (Build.VERSION.SDK_INT < 23) {
 			notification = new Notification(R.drawable.ime_en_lang_lower, getText(R.string.updating_database_title),
 					System.currentTimeMillis());
 			notification.setLatestEventInfo(this, getText(R.string.updating_database_title),
