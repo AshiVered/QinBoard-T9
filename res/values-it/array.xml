@@ -27,6 +27,12 @@
     </string-array>
 
     <string-array name="smileyContentDescription">
+        <item/><item/><item/><item/><item/><item/><item/><item/><item/><item/>
+        <item/><item/><item/><item/><item/><item/><item/><item/><item/><item/>
+        <item/><item/><item/><item/><item/><item/><item/><item/><item/><item/>
+        <item/><item/><item/><item/><item/><item/><item/><item/><item/><item/>
+        <item/><item/><item/><item/><item/><item/><item/><item/><item/><item/>
+
         <item> Sorriso </item>
         <item> Pagliaccio </item>
         <item> Gran sorriso </item>

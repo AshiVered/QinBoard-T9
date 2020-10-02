@@ -44,6 +44,12 @@
 	</string-array>
 
 	<string-array name="smileyContentDescription">
+		<item/><item/><item/><item/><item/><item/><item/><item/><item/><item/>
+		<item/><item/><item/><item/><item/><item/><item/><item/><item/><item/>
+		<item/><item/><item/><item/><item/><item/><item/><item/><item/><item/>
+		<item/><item/><item/><item/><item/><item/><item/><item/><item/><item/>
+		<item/><item/><item/><item/><item/><item/><item/><item/><item/><item/>
+
 		<item> Smile </item>
 		<item> Clown </item>
 		<item> Sharp grin </item>

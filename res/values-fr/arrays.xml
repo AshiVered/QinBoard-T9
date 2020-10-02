@@ -31,6 +31,12 @@
 	</string-array>
 
 	<string-array name="smileyContentDescription">
+		<item/><item/><item/><item/><item/><item/><item/><item/><item/><item/>
+		<item/><item/><item/><item/><item/><item/><item/><item/><item/><item/>
+		<item/><item/><item/><item/><item/><item/><item/><item/><item/><item/>
+		<item/><item/><item/><item/><item/><item/><item/><item/><item/><item/>
+		<item/><item/><item/><item/><item/><item/><item/><item/><item/><item/>
+
 		<item> Sourire </item>
 		<item> Clown </item>
 		<item> Grand sourire </item>
