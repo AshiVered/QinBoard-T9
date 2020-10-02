@@ -67,6 +67,15 @@
     <string name="pref_nuke_warn">Attenzione: L\'intero dizionario sarà cancellato. Continuare ?</string>
     <string name="pref_nuke_title">Elimina dizionario IME </string>
     <string name="pref_reloadKeys">Ricaricamento KeyMap</string>
+    <string name="pref_reloadKeysSum">Traslation of: Force reload of key mapping overrides</string>
+    <string name="pref_reloadKeysDone">Traslation of: Reload complete.</string>
+    <string name="pref_reloadKeysDoneWE">Traslation of: Reload complete with errors (check logcat.)</string>
+    <string name="pref_reloadKeysNoFile">Traslation of: No keymap.txt file found.</string>
+    <string name="pref_keyRemap">Traslation of: Translate keys</string>
+    <string name="pref_keyRemapSum">Traslation of: Enable to send translated keys to apps, otherwise keymap is for IME only.</string>
+    <string name="pref_spaceOnZero">Traslation of: Space on 0 key</string>
+    <string name="pref_noSoftButtons">Traslation of: No soft buttons</string>
+    <string name="pref_noSoftButtonsSum">Traslation of: Not show soft buttons, implies \"Space on 0 key\" (Use # to change input mode)</string>
     <string name="candidate_view_add_word">Agg.</string>
     <string name="hello_world">Ciao mondo!</string>
 

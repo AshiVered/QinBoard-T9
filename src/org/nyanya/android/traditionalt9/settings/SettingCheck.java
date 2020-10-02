@@ -10,6 +10,7 @@ import org.nyanya.android.traditionalt9.T9DB;
 import org.nyanya.android.traditionalt9.T9DB.DBSettings.SETTING;
 
 public class SettingCheck extends Setting {
+
 	boolean value;
 	boolean defaultValue;
 
@@ -38,8 +39,14 @@ public class SettingCheck extends Setting {
 	@Override
 	public void clicked(Context context) {
 		value = !value;
+
 		T9DB.getInstance(context).storeSettingInt(SETTING.get(id), value ? 1 : 0);
 		((CheckBox)view.findViewById(R.id.checkbox)).setChecked(value);
+
+	}
+
+	public boolean isValue() {
+		return value;
 	}
 
 	@Override

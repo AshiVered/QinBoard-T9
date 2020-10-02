@@ -68,8 +68,16 @@
 	<string name="pref_nuke_warn">Advertencia: Esto borrará todo su diccionario. ¿Desea continuar?</string>
 	<string name="pref_nuke_title">Asesinar diccionario IME</string>
 	<string name="pref_reloadKeys">Recargar KeyMap</string>
+	<string name="pref_reloadKeysSum">Fuerza la recarga de la sobreescritura de mapeos de teclas</string>
+	<string name="pref_reloadKeysDone">Recarga completa.</string>
+	<string name="pref_reloadKeysDoneWE">Recarga completa con errores (ver registro.)</string>
+	<string name="pref_reloadKeysNoFile">No se encontro el archivo keymap.txt</string>
+	<string name="pref_keyRemap">Traducir teclas</string>
+	<string name="pref_keyRemapSum">Habilitar para enviar teclas traducidas a las aplicaciones, de otro modo el mapeo de teclas es solo para IME.</string>
+	<string name="pref_spaceOnZero">Espacio en la tecla 0</string>
+	<string name="pref_noSoftButtons">Sin botones en pantalla</string>
+	<string name="pref_noSoftButtonsSum">Sin botones en pantalla, implica \"Espacio en la tecla 0\" (Use # para cambiar el modo de entrada)</string>
 	<string name="candidate_view_add_word">Agregar</string>
 	<string name="hello_world">¡Hola mundo!</string>
-
 
 </resources>

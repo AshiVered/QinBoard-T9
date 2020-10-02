@@ -37,6 +37,7 @@ import org.nyanya.android.traditionalt9.LangHelper.LANGUAGE;
 import org.nyanya.android.traditionalt9.T9DB.DBSettings.SETTING;
 import org.nyanya.android.traditionalt9.settings.CustomInflater;
 import org.nyanya.android.traditionalt9.settings.Setting;
+import org.nyanya.android.traditionalt9.settings.SettingCheck;
 import org.nyanya.android.traditionalt9.settings.SettingAdapter;
 
 import java.io.BufferedReader;
@@ -727,6 +728,21 @@ public class TraditionalT9Settings extends ListActivity implements
 			if (msg != 0) {
 				Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
 			}
+		}
+		else if (s.id.equals("pref_noSoftButtons")) {//no softbuttons implies space on zero
+			s.clicked(mContext);
+			SettingCheck s1 = (SettingCheck)getListView().getItemAtPosition(4);//"pref_spaceOnZero"
+			if (((SettingCheck)s).isValue() && !s1.isValue())
+				s1.clicked(mContext);
+		}
+		else if (s.id.equals("pref_spaceOnZero")) {
+			SettingCheck s1 = (SettingCheck)getListView().getItemAtPosition(3);//"pref_noSoftButtons"
+			//Toast.makeText(this,"pref_noSoftButtons"+ s1.id, Toast.LENGTH_SHORT).show();
+			if (!s1.isValue())
+				s.clicked(mContext);
+			else
+				if (!((SettingCheck) s).isValue())
+					s.clicked(mContext);
 		}
 		else
 			s.clicked(mContext);
