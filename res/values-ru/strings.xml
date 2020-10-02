@@ -31,7 +31,7 @@
     <string name="pref_loaduserdict">Загрузить свой словарь</string>
     <string name="pref_lang_title">Мультиязычная поддержка</string>
     <string name="pref_nuke_title">Очистить IME словарь</string>
-    <string name="pref_nuke_warn">Предупреждение: Будет выполнена очстка словаря. Продолжить?</string>
+    <string name="pref_nuke_warn">Предупреждение: Будет выполнена очистка словаря. Продолжить?</string>
     <string name="pref_nukedict">Очистить словарь</string>
     <string name="pref_nukingdict">Очистка словаря… Пожалуйста, подождите…</string>
     <string name="pref_querytest">Query test</string>
@@ -44,7 +44,7 @@
     <string name="pref_testfunc">Test func</string>
     <string name="ricon_desc">Hold Icon</string>
     <string name="pref_help">О программе</string>
-    <string name="symbol_next">Следущая страница</string>
+    <string name="symbol_next">Следующая страница</string>
     <string name="symbol_prev">Предыдущая страница</string>
 
 	<string name="symbol_insert">Вставить символ</string>

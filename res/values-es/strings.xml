@@ -10,15 +10,15 @@
 	<string name="main_left_addword">Agregar palabra</string>
 	<string name="main_mid">Aceptar</string>
 	<string name="main_mid_commit">Confirmar</string>
-	<string name="main_right_upper">Modo ciclico</string>
+	<string name="main_right_upper">Modo cíclico</string>
 	<string name="main_right_lower">Options</string>
 	<string name="main_left_notfound">¿Agregar palabra?</string>
 	<string name="ricon_desc">Mantener icono</string>
 	<string name="symbol_next">Página sig.</string>
 	<string name="symbol_prev">Página prev.</string>
-	<string name="symbol_insert">Insertar símbolo</string>
-	<string name="smiley_insert">Insertar sonrisa</string>
-	<string name="symbol_page">Página: %1$s/%2$s</string>
+	<string name="symbol_insert">Ins. símbolo</string>
+	<string name="smiley_insert">Ins. sonrisa</string>
+	<string name="symbol_page">Pág. %1$s/%2$s</string>
 
 	<string name="add_word">Agregar palabra</string>
 	<string name="close">Cerrar</string>

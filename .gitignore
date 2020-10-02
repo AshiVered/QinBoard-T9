@@ -32,4 +32,6 @@ proguard/
 
 #Other
 assets/dict.properties
+build*.sh
+R.java
 t9build.properties
