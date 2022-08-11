@@ -667,17 +667,7 @@ public class TraditionalT9 extends InputMethodService implements
 
 		// Log.d("onLongPress", "LONG PRESS: " + keyCode);
 		// HANDLE SPECIAL KEYS
-		if (keyCode == KeyEvent.KEYCODE_POUND) {
-			commitReset();
-			// do default action or insert new line
-			if (!sendDefaultEditorAction(true)) {
-				onText("\n");
-			}
-			return true;
-		} else if (keyCode == KeyEvent.KEYCODE_STAR) {
- 				showAddWord();
-
-		} else if (keyCode == KeyEvent.KEYCODE_SOFT_LEFT) {
+		if (keyCode == KeyEvent.KEYCODE_SOFT_LEFT) {
 			if (interfacehandler != null) {
 				interfacehandler.setPressed(keyCode, false);
 			}
@@ -689,8 +679,17 @@ public class TraditionalT9 extends InputMethodService implements
 				}
 			}
 
-		}
-		else if (keyCode == KeyEvent.KEYCODE_SOFT_RIGHT) {
+	    } else if (keyCode == KeyEvent.KEYCODE_POUND) {
+			commitReset();
+			// do default action or insert new line
+			if (!sendDefaultEditorAction(true)) {
+				onText("\n");
+			}
+			return true;
+		} else if (keyCode == KeyEvent.KEYCODE_STAR) {
+			showSmileyPage();
+
+		}	else if (keyCode == KeyEvent.KEYCODE_SOFT_RIGHT) {
 			if (interfacehandler != null) {
 				interfacehandler.setPressed(keyCode, false);
 			}
@@ -1278,19 +1277,19 @@ public class TraditionalT9 extends InputMethodService implements
 				return super.onKeyUp(keyCode, event);
 			} else {
 				if (mKeyMode != MODE_NUM && mComposing.length() > 0) {
-					if (keyCode == KeyEvent.KEYCODE_DPAD_DOWN) {
+					if (keyCode == KeyEvent.KEYCODE_DPAD_RIGHT) {
 						mCandidateView.scrollSuggestion(1);
 
 						if (!(noSoftButtons && isAddWordOptionSelected())&&mSuggestionStrings.size() > mCandidateView.mSelectedIndex)
 							currentInputConnection.setComposingText(mSuggestionStrings.get(mCandidateView.mSelectedIndex), 1);
 						return true;
-					} else if (keyCode == KeyEvent.KEYCODE_DPAD_UP) {
+					} else if (keyCode == KeyEvent.KEYCODE_DPAD_LEFT) {
 						mCandidateView.scrollSuggestion(-1);
 
 						if (!(noSoftButtons && isAddWordOptionSelected())&&mSuggestionStrings.size() > mCandidateView.mSelectedIndex )
 							currentInputConnection.setComposingText(mSuggestionStrings.get(mCandidateView.mSelectedIndex), 1);
 						return true;
-					} else if (keyCode == KeyEvent.KEYCODE_DPAD_LEFT || keyCode == KeyEvent.KEYCODE_DPAD_RIGHT) {
+					} else if (keyCode == KeyEvent.KEYCODE_DPAD_DOWN || keyCode == KeyEvent.KEYCODE_DPAD_UP) {
 						if (mKeyMode == MODE_LANG) {
 							commitTyped();
 						} else if (mKeyMode == MODE_TEXT) {
