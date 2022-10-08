@@ -24,14 +24,14 @@ public abstract class AbsSymDialog extends Dialog implements
 	private boolean started;
 
 	private static final int[] buttons = {
-		R.id.text_keyone,   R.id.text_keytwo,
-		R.id.text_keythree, R.id.text_keyfour,  R.id.text_keyfive,
-		R.id.text_keysix,   R.id.text_keyseven, R.id.text_keyeight,
-		R.id.text_keynine,  R.id.text_keyzero
+			R.id.text_keyone,   R.id.text_keytwo,
+			R.id.text_keythree, R.id.text_keyfour,  R.id.text_keyfive,
+			R.id.text_keysix,   R.id.text_keyseven, R.id.text_keyeight,
+			R.id.text_keynine,  R.id.text_keyzero
 	};
 	private static final int[] buttons2 = {
-		R.id.text_keystar,
-		R.id.text_keypound
+			R.id.text_keystar,
+			R.id.text_keypound
 	};
 
 	public AbsSymDialog(Context c, View mv) {
@@ -60,43 +60,43 @@ public abstract class AbsSymDialog extends Dialog implements
 	public void onClick(View v) {
 		// Log.d("SymbolPopup - onClick", "click happen: " + v);
 		switch (v.getId()) {
-		case R.id.text_keyone:
-			sendChar(pageoffset);
-			break;
-		case R.id.text_keytwo:
-			sendChar(pageoffset + 1);
-			break;
-		case R.id.text_keythree:
-			sendChar(pageoffset + 2);
-			break;
-		case R.id.text_keyfour:
-			sendChar(pageoffset + 3);
-			break;
-		case R.id.text_keyfive:
-			sendChar(pageoffset + 4);
-			break;
-		case R.id.text_keysix:
-			sendChar(pageoffset + 5);
-			break;
-		case R.id.text_keyseven:
-			sendChar(pageoffset + 6);
-			break;
-		case R.id.text_keyeight:
-			sendChar(pageoffset + 7);
-			break;
-		case R.id.text_keynine:
-			sendChar(pageoffset + 8);
-			break;
-		case R.id.text_keyzero:
-			sendChar(pageoffset + 9);
-			break;
+			case R.id.text_keyone:
+				sendChar(pageoffset);
+				break;
+			case R.id.text_keytwo:
+				sendChar(pageoffset + 1);
+				break;
+			case R.id.text_keythree:
+				sendChar(pageoffset + 2);
+				break;
+			case R.id.text_keyfour:
+				sendChar(pageoffset + 3);
+				break;
+			case R.id.text_keyfive:
+				sendChar(pageoffset + 4);
+				break;
+			case R.id.text_keysix:
+				sendChar(pageoffset + 5);
+				break;
+			case R.id.text_keyseven:
+				sendChar(pageoffset + 6);
+				break;
+			case R.id.text_keyeight:
+				sendChar(pageoffset + 7);
+				break;
+			case R.id.text_keynine:
+				sendChar(pageoffset + 8);
+				break;
+			case R.id.text_keyzero:
+				sendChar(pageoffset + 9);
+				break;
 
-		case R.id.text_keypound:
-			pageChange(1);
-			break;
-		case R.id.text_keystar:
-			pageChange(-1);
-			break;
+			case R.id.text_keypound:
+				pageChange(1);
+				break;
+			case R.id.text_keystar:
+				pageChange(-1);
+				break;
 		}
 	}
 
@@ -169,30 +169,30 @@ public abstract class AbsSymDialog extends Dialog implements
 		}
 		// TODO: remove emulator special keys
 		switch (keyCode) {
-		case 75:
-			keyCode = KeyEvent.KEYCODE_POUND;
-			break;
-		case 74:
-			keyCode = KeyEvent.KEYCODE_STAR;
-			break;
+			case 75:
+				keyCode = KeyEvent.KEYCODE_POUND;
+				break;
+			case 74:
+				keyCode = KeyEvent.KEYCODE_STAR;
+				break;
 		}
 		// Log.d("AbsSymDialog.onKeyDown", "bootan pres: " + keyCode);
 		switch (keyCode) {
 
-		case KeyEvent.KEYCODE_0:
-		case KeyEvent.KEYCODE_1:
-		case KeyEvent.KEYCODE_2:
-		case KeyEvent.KEYCODE_3:
-		case KeyEvent.KEYCODE_4:
-		case KeyEvent.KEYCODE_5:
-		case KeyEvent.KEYCODE_6:
-		case KeyEvent.KEYCODE_7:
-		case KeyEvent.KEYCODE_8:
-		case KeyEvent.KEYCODE_9:
-		case KeyEvent.KEYCODE_POUND:
-		case KeyEvent.KEYCODE_STAR:
-			event.startTracking();
-			return true;
+			case KeyEvent.KEYCODE_0:
+			case KeyEvent.KEYCODE_1:
+			case KeyEvent.KEYCODE_2:
+			case KeyEvent.KEYCODE_3:
+			case KeyEvent.KEYCODE_4:
+			case KeyEvent.KEYCODE_5:
+			case KeyEvent.KEYCODE_6:
+			case KeyEvent.KEYCODE_7:
+			case KeyEvent.KEYCODE_8:
+			case KeyEvent.KEYCODE_9:
+			case KeyEvent.KEYCODE_POUND:
+			case KeyEvent.KEYCODE_STAR:
+				event.startTracking();
+				return true;
 		}
 		return super.onKeyDown(keyCode, event);
 	}
@@ -206,33 +206,33 @@ public abstract class AbsSymDialog extends Dialog implements
 		}
 		// TODO: remove emulator special keys
 		switch (keyCode) {
-		case 75:
-			keyCode = KeyEvent.KEYCODE_POUND;
-			break;
-		case 74:
-			keyCode = KeyEvent.KEYCODE_STAR;
-			break;
+			case 75:
+				keyCode = KeyEvent.KEYCODE_POUND;
+				break;
+			case 74:
+				keyCode = KeyEvent.KEYCODE_STAR;
+				break;
 		}
 		switch (keyCode) {
-		// pass-through
-		case KeyEvent.KEYCODE_0:
-		case KeyEvent.KEYCODE_1:
-		case KeyEvent.KEYCODE_2:
-		case KeyEvent.KEYCODE_3:
-		case KeyEvent.KEYCODE_4:
-		case KeyEvent.KEYCODE_5:
-		case KeyEvent.KEYCODE_6:
-		case KeyEvent.KEYCODE_7:
-		case KeyEvent.KEYCODE_8:
-		case KeyEvent.KEYCODE_9:
-		case KeyEvent.KEYCODE_POUND:
-		case KeyEvent.KEYCODE_STAR:
-			onKey(keyCode);
-			return true;
-		default:
-			// KeyCharacterMap.load(KeyCharacterMap.BUILT_IN_KEYBOARD).getNumber(keyCode)
-			// Log.w("onKeyUp", "Unhandled Key: " + keyCode + "(" +
-			// event.toString() + ")");
+			// pass-through
+			case KeyEvent.KEYCODE_0:
+			case KeyEvent.KEYCODE_1:
+			case KeyEvent.KEYCODE_2:
+			case KeyEvent.KEYCODE_3:
+			case KeyEvent.KEYCODE_4:
+			case KeyEvent.KEYCODE_5:
+			case KeyEvent.KEYCODE_6:
+			case KeyEvent.KEYCODE_7:
+			case KeyEvent.KEYCODE_8:
+			case KeyEvent.KEYCODE_9:
+			case KeyEvent.KEYCODE_POUND:
+			case KeyEvent.KEYCODE_STAR:
+				onKey(keyCode);
+				return true;
+			default:
+				// KeyCharacterMap.load(KeyCharacterMap.BUILT_IN_KEYBOARD).getNumber(keyCode)
+				// Log.w("onKeyUp", "Unhandled Key: " + keyCode + "(" +
+				// event.toString() + ")");
 		}
 		return super.onKeyUp(keyCode, event);
 	}
@@ -242,42 +242,42 @@ public abstract class AbsSymDialog extends Dialog implements
 		// Log.d("onKey", "START Cm: " + mCapsMode);
 		// HANDLE SPECIAL KEYS
 		switch (keyCode) {
-		case KeyEvent.KEYCODE_1:
-			sendChar(pageoffset);
-			break;
-		case KeyEvent.KEYCODE_2:
-			sendChar(pageoffset + 1);
-			break;
-		case KeyEvent.KEYCODE_3:
-			sendChar(pageoffset + 2);
-			break;
-		case KeyEvent.KEYCODE_4:
-			sendChar(pageoffset + 3);
-			break;
-		case KeyEvent.KEYCODE_5:
-			sendChar(pageoffset + 4);
-			break;
-		case KeyEvent.KEYCODE_6:
-			sendChar(pageoffset + 5);
-			break;
-		case KeyEvent.KEYCODE_7:
-			sendChar(pageoffset + 6);
-			break;
-		case KeyEvent.KEYCODE_8:
-			sendChar(pageoffset + 7);
-			break;
-		case KeyEvent.KEYCODE_9:
-			sendChar(pageoffset + 8);
-			break;
-		case KeyEvent.KEYCODE_0:
-			sendChar(pageoffset + 9);
-			break;
-		case KeyEvent.KEYCODE_STAR:
-			pageChange(-1);
-			break;
-		case KeyEvent.KEYCODE_POUND:
-			pageChange(1);
-			break;
+			case KeyEvent.KEYCODE_1:
+				sendChar(pageoffset);
+				break;
+			case KeyEvent.KEYCODE_2:
+				sendChar(pageoffset + 1);
+				break;
+			case KeyEvent.KEYCODE_3:
+				sendChar(pageoffset + 2);
+				break;
+			case KeyEvent.KEYCODE_4:
+				sendChar(pageoffset + 3);
+				break;
+			case KeyEvent.KEYCODE_5:
+				sendChar(pageoffset + 4);
+				break;
+			case KeyEvent.KEYCODE_6:
+				sendChar(pageoffset + 5);
+				break;
+			case KeyEvent.KEYCODE_7:
+				sendChar(pageoffset + 6);
+				break;
+			case KeyEvent.KEYCODE_8:
+				sendChar(pageoffset + 7);
+				break;
+			case KeyEvent.KEYCODE_9:
+				sendChar(pageoffset + 8);
+				break;
+			case KeyEvent.KEYCODE_0:
+				sendChar(pageoffset + 9);
+				break;
+			case KeyEvent.KEYCODE_STAR:
+				pageChange(-1);
+				break;
+			case KeyEvent.KEYCODE_POUND:
+				pageChange(1);
+				break;
 		}
 	}
 

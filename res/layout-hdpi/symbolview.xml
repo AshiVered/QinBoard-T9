@@ -17,19 +17,19 @@
 		<TextView
 			android:id="@+id/text_keyone"
 			style="@style/SymbolStyle"
-			android:layout_width="2px"
+			android:layout_width="wrap_content"
 			android:background="@drawable/button_symbol" />
 
 		<TextView
 			android:id="@+id/text_keytwo"
 			style="@style/SymbolStyle"
-			android:layout_width="2px"
+			android:layout_width="wrap_content"
 			android:background="@drawable/button_symbol" />
 
 		<TextView
 			android:id="@+id/text_keythree"
 			style="@style/SymbolStyle"
-			android:layout_width="2px"
+			android:layout_width="wrap_content"
 			android:background="@drawable/button_symbol" />
 
 	</LinearLayout>
@@ -45,19 +45,19 @@
 		<TextView
 			android:id="@+id/text_keyfour"
 			style="@style/SymbolStyle"
-			android:layout_width="2px"
+			android:layout_width="wrap_content"
 			android:background="@drawable/button_symbol" />
 
 		<TextView
 			android:id="@+id/text_keyfive"
 			style="@style/SymbolStyle"
-			android:layout_width="2px"
+			android:layout_width="wrap_content"
 			android:background="@drawable/button_symbol" />
 
 		<TextView
 			android:id="@+id/text_keysix"
 			style="@style/SymbolStyle"
-			android:layout_width="2px"
+			android:layout_width="wrap_content"
 			android:background="@drawable/button_symbol" />
 
 	</LinearLayout>
@@ -73,19 +73,19 @@
 		<TextView
 			android:id="@+id/text_keyseven"
 			style="@style/SymbolStyle"
-			android:layout_width="2px"
+			android:layout_width="wrap_content"
 			android:background="@drawable/button_symbol" />
 
 		<TextView
 			android:id="@+id/text_keyeight"
 			style="@style/SymbolStyle"
-			android:layout_width="2px"
+			android:layout_width="wrap_content"
 			android:background="@drawable/button_symbol" />
 
 		<TextView
 			android:id="@+id/text_keynine"
 			style="@style/SymbolStyle"
-			android:layout_width="2px"
+			android:layout_width="wrap_content"
 			android:background="@drawable/button_symbol" />
 
 	</LinearLayout>
@@ -101,7 +101,7 @@
 		<TextView
 			android:id="@+id/text_keystar"
 			style="@style/SymbolStyle"
-			android:layout_width="2px"
+			android:layout_width="wrap_content"
 			android:background="@drawable/nav_button_symbol"
 			android:singleLine="true"
 			android:text="@string/prev" />
@@ -109,7 +109,7 @@
 		<TextView
 			android:id="@+id/text_keyzero"
 			style="@style/SymbolStyle"
-			android:layout_width="2px"
+			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:background="@drawable/button_symbol"
 			android:textSize="30sp" />
@@ -117,7 +117,7 @@
 		<TextView
 			android:id="@+id/text_keypound"
 			style="@style/SymbolStyle"
-			android:layout_width="2px"
+			android:layout_width="wrap_content"
 			android:background="@drawable/nav_button_symbol"
 			android:singleLine="true"
 			android:text="@string/next" />

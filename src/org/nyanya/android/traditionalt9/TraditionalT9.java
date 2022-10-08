@@ -546,6 +546,8 @@ public class TraditionalT9 extends InputMethodService implements
 				return false;
 			}
 			return handleDPAD(keyCode, event, true);
+
+
 		} else if (keyCode == KeyEvent.KEYCODE_DPAD_DOWN || keyCode == KeyEvent.KEYCODE_DPAD_UP || keyCode == KeyEvent.KEYCODE_DPAD_LEFT || keyCode == KeyEvent.KEYCODE_DPAD_RIGHT) {
 			if (mEditing == EDITING_NOSHOW) {
 				return false;
@@ -603,6 +605,12 @@ public class TraditionalT9 extends InputMethodService implements
 
 			event.startTracking();
 			return true;
+		} else if (keyCode == KeyEvent.KEYCODE_CALL) {
+				mCandidateView.scrollSuggestion(1);
+			if (!(noSoftButtons && isAddWordOptionSelected())&&mSuggestionStrings.size() > mCandidateView.mSelectedIndex)
+				currentInputConnection.setComposingText(mSuggestionStrings.get(mCandidateView.mSelectedIndex), 1);
+			return true;
+
 		} else if (keyCode == KeyEvent.KEYCODE_0 || keyCode == KeyEvent.KEYCODE_1 || keyCode == KeyEvent.KEYCODE_2 ||
 				keyCode == KeyEvent.KEYCODE_3 || keyCode == KeyEvent.KEYCODE_4 || keyCode == KeyEvent.KEYCODE_5 ||
 				keyCode == KeyEvent.KEYCODE_6 || keyCode == KeyEvent.KEYCODE_7 || keyCode == KeyEvent.KEYCODE_8 ||
@@ -730,6 +738,7 @@ public class TraditionalT9 extends InputMethodService implements
 		}
 
 		if (keyCode == KeyEvent.KEYCODE_DPAD_CENTER) {
+
 			if (interfacehandler != null) {
 				interfacehandler.setPressed(keyCode, false);
 			}
@@ -742,6 +751,8 @@ public class TraditionalT9 extends InputMethodService implements
 				return false;
 			}
 			return handleDPAD(keyCode, event, false);
+
+
 		} else if (keyCode == KeyEvent.KEYCODE_SOFT_RIGHT || keyCode == KeyEvent.KEYCODE_SOFT_LEFT) {
 			if (!isInputViewShown()) {
 				return super.onKeyDown(keyCode, event);
@@ -760,6 +771,8 @@ public class TraditionalT9 extends InputMethodService implements
 			}
 			return false;
 		} else if (keyCode == KeyEvent.KEYCODE_DEL || keyCode == KeyEvent.KEYCODE_BACK) {
+			return true;
+		} else if (keyCode == KeyEvent.KEYCODE_CALL) {
 			return true;
 		} else if (keyCode == KeyEvent.KEYCODE_ENTER) {
 			return false;
@@ -924,7 +937,6 @@ public class TraditionalT9 extends InputMethodService implements
 
 		} else if (keyCode == KeyEvent.KEYCODE_SOFT_RIGHT) {
 			nextKeyMode();
-
 		} else {
 			if (keyCode >= KeyEvent.KEYCODE_0 && keyCode <= KeyEvent.KEYCODE_9) {
 				handleCharacter(keyCode);

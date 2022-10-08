@@ -11,6 +11,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.app.ProgressDialog;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -24,9 +25,11 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.SystemClock;
+import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -711,8 +714,10 @@ public class TraditionalT9Settings extends ListActivity implements
 	@Override
 	protected  void onListItemClick(ListView l, View v, int position, long id) {
 		Setting s = (Setting)getListView().getItemAtPosition(position);
-		if (s.id.equals("help"))
-			openHelp();
+		if (s.id.equals("github"))
+			openGithub();
+		else if (s.id.equals("keyboard_Manger"))
+			MangeKey();
 		else if (s.id.equals("loaddict"))
 			preloader(R.string.pref_loadingdict, true, false);
 		else if (s.id.equals("loaduserdict"))
@@ -748,10 +753,13 @@ public class TraditionalT9Settings extends ListActivity implements
 			s.clicked(mContext);
 	}
 
-	private void openHelp() {
+	private void openGithub() {
 		Intent i = new Intent(Intent.ACTION_VIEW);
 		i.setData(Uri.parse(getString(R.string.help_url)));
 		startActivity(i);
+	}
+	private void MangeKey() {
+		InputMethodManager imeManager = (InputMethodManager) getApplicationContext().getSystemService(INPUT_METHOD_SERVICE); imeManager.showInputMethodPicker();
 	}
 
 	// LoadDictTask(int msgid, boolean intern, boolean restorebackup, CheckBoxPreference setting)

@@ -109,7 +109,8 @@ android {
 		targetSdkVersion 30
 		versionCode computeVersionNumber()
 		versionName computeVersionName()
-	}
+        applicationId 'aiv.ashivered.qinboard.t9'
+    }
 
 	// http://stackoverflow.com/a/19130098
 	signingConfigs {
