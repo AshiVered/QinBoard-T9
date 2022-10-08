@@ -28,7 +28,7 @@
 		<item>@integer/LANG_FR</item>
 		<item>@integer/LANG_IT</item>
 		<item>@integer/LANG_UK</item>
-		<item>@integer/LANG_HE</item>		
+		<item>@integer/LANG_ES</item>		
 	</integer-array>
 
 	<string-array name="capsMode">
