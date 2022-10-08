@@ -13,12 +13,12 @@
 
 	<string-array name="pref_lang_titles">
 		<item>English</item>
-		<item>Русский (Russian)</item>
-		<item>Deutsch (German)</item>
-		<item>Français (French)</item>
-		<item>Italiano (Italian)</item>
-		<item>українська (Ukrainian)</item>
-		<item>עברית (Hebrow)</item>		
+		<item>Russian</item>
+		<item>German</item>
+		<item>French</item>
+		<item>Italian</item>
+		<item>Ukrainian</item>
+		<item>Spanish</item>	
 	</string-array>
 	<!--pref_lang_titles pair with pref_lang_values -->
 	<integer-array translatable="false" name="pref_lang_values">
