@@ -42,8 +42,10 @@ public class CharMap {
 		enMap.put('€', 1); enMap.put('ß', 7); // German chars
 		enMap.put('æ', 1); enMap.put('î', 4); enMap.put('ù', 8); enMap.put('œ', 6);	// French chars
 		enMap.put('ì', 4); enMap.put('ò', 8); // Italian chars
-		Map<Character, Integer> endefritmap = Collections.unmodifiableMap(enMap);
-		CHARTABLE.add(0, endefritmap);
+		enMap.put('ú', 4); enMap.put('ç', 8); // Spanish chars + ç
+		Map<Character, Integer> endefritesmap = Collections.unmodifiableMap(enMap);
+		CHARTABLE.add(0, endefritesmap);
+
 
 		// Russian
 		Map<Character, Integer> ruMap = new HashMap<Character, Integer>();
@@ -72,113 +74,89 @@ public class CharMap {
 		ruMap.put('9', 9);
 		ruMap.put('+', 0);
 		ruMap.put('0', 0);
-	
+
 		// add extra characters for other Cyrillic maps.
 		ruMap.put('ґ', 2); ruMap.put('є', 3); ruMap.put('і', 4); ruMap.put('ї', 4);// Ukrainian chars
 		// Stub for Bulgarian chars
-		// Stub for Bielorussian chars	
+		// Stub for Bielorussian chars
 		// etc
 		CHARTABLE.add(1, Collections.unmodifiableMap(ruMap));
 
-		CHARTABLE.add(2, Collections.unmodifiableMap(endefritmap));
-		CHARTABLE.add(3, Collections.unmodifiableMap(endefritmap));
-		CHARTABLE.add(4, Collections.unmodifiableMap(endefritmap));
+		CHARTABLE.add(2, Collections.unmodifiableMap(endefritesmap));
+		CHARTABLE.add(3, Collections.unmodifiableMap(endefritesmap));
+		CHARTABLE.add(4, Collections.unmodifiableMap(endefritesmap));
 		CHARTABLE.add(5, Collections.unmodifiableMap(ruMap));
-
-		// Hebrew		Map<Character, Integer> heMap = new HashMap<Character, Integer>();
-		Map<Character, Integer> heMap = new HashMap<Character, Integer>();
-		heMap.put('.', 1); heMap.put(',', 1); heMap.put('!', 1); heMap.put('?', 1);
-		heMap.put('-', 1); heMap.put('"', 1); heMap.put('\'', 1); heMap.put('@', 1);
-		heMap.put('#', 1); heMap.put('$', 1); heMap.put('%', 1); heMap.put('&', 1);
-		heMap.put('*', 1); heMap.put('(', 1); heMap.put(')', 1); heMap.put(':', 1);
-		heMap.put(';', 1); heMap.put('/', 1); heMap.put('+', 1); heMap.put('=', 1);
-		heMap.put('<', 1); heMap.put('>', 1); heMap.put('^', 1); heMap.put('_', 1);
-		heMap.put('~', 1); heMap.put('1', 1);
-		heMap.put('ד', 2); heMap.put('ה', 2);
-		heMap.put('ו', 2); heMap.put('2', 2);
-		heMap.put('א', 3); heMap.put('ב', 3);
-		heMap.put('ג', 3); heMap.put('3', 3);
-		heMap.put('מ', 4); heMap.put('ם', 4);
-		heMap.put('נ', 4); heMap.put('ן', 4); heMap.put('4', 4);
-		heMap.put('י', 5);
-		heMap.put('כ', 5); heMap.put('ך', 5); heMap.put('ל', 5); heMap.put('5', 5);
-		heMap.put('ז', 6); heMap.put('ח', 6); heMap.put('ט', 6); heMap.put('6', 6);
-		heMap.put('ר', 7); heMap.put('ש', 7); heMap.put('ת', 7); heMap.put('7', 7);
-		heMap.put('צ', 8); heMap.put('ץ', 8); heMap.put('ק', 8); heMap.put('8', 8);
-		heMap.put('ס', 9); heMap.put('ע', 9); heMap.put('פ', 9); heMap.put('ף', 9);
-		heMap.put('9', 9);
-		heMap.put('+', 0); heMap.put('0', 0);
-
-		CHARTABLE.add(6, Collections.unmodifiableMap(heMap));
+		CHARTABLE.add(6, Collections.unmodifiableMap(endefritesmap));
 	}
 
 	protected static final char[][] ENT9TABLE = { { '0', '+' },
-		{ '.', ',', '?', '!', '"', '/', '-', '@', '$', '%', '&', '*', '#', '(', ')', '_', '1' },
-		{ 'a', 'b', 'c', 'A', 'B', 'C', '2' }, { 'd', 'e', 'f', 'D', 'E', 'F', '3' },
-		{ 'g', 'h', 'i', 'G', 'H', 'I', '4' }, { 'j', 'k', 'l', 'J', 'K', 'L', '5' },
-		{ 'm', 'n', 'o', 'M', 'N', 'O', '6' }, { 'p', 'q', 'r', 's', 'P', 'Q', 'R', 'S', '7' },
-		{ 't', 'u', 'v', 'T', 'U', 'V', '8' }, { 'w', 'x', 'y', 'z', 'W', 'X', 'Y', 'Z', '9' },
-		{ ' ', '\n' }, { ' ', '0', '+' }, { '\n' } }; // LAST TWO SPACE ON 0
+			{ '.', ',', '?', '!', '"', '/', '-', '@', '$', '%', '&', '*', '#', '(', ')', '_', '1' },
+			{ 'a', 'b', 'c', 'A', 'B', 'C', '2' }, { 'd', 'e', 'f', 'D', 'E', 'F', '3' },
+			{ 'g', 'h', 'i', 'G', 'H', 'I', '4' }, { 'j', 'k', 'l', 'J', 'K', 'L', '5' },
+			{ 'm', 'n', 'o', 'M', 'N', 'O', '6' }, { 'p', 'q', 'r', 's', 'P', 'Q', 'R', 'S', '7' },
+			{ 't', 'u', 'v', 'T', 'U', 'V', '8' }, { 'w', 'x', 'y', 'z', 'W', 'X', 'Y', 'Z', '9' },
+			{ ' ', '\n' }, { ' ', '0', '+' }, { '\n' } }; // LAST TWO SPACE ON 0
 	protected static final char[][] RUT9TABLE = { { '0', '+' },
-		{ '.', ',', '?', '!', '"', '/', '-', '@', '$', '%', '&', '*', '#', '(', ')', '_', '1' },
-		{ 'а', 'б', 'в', 'г', 'А', 'Б', 'В', 'Г', '2' }, { 'д', 'е', 'ё', 'ж', 'з', 'Д', 'Е', 'Ё', 'Ж', 'З', '3' },
-		{ 'и', 'й', 'к', 'л', 'И', 'Й', 'К', 'Л', '4' }, { 'м', 'н', 'о', 'п', 'М', 'Н', 'О', 'П', '5' },
-		{ 'р', 'с', 'т', 'у', 'Р', 'С', 'Т', 'У', '6' }, { 'ф', 'х', 'ц', 'ч', 'Ф', 'Х', 'Ц', 'Ч', '7' },
-		{ 'ш', 'щ', 'ъ', 'ы', 'Ш', 'Щ', 'Ъ', 'Ы', '8' }, { 'ь', 'э', 'ю', 'я', 'Ь', 'Э', 'Ю', 'Я', '9' },
-		{ ' ', '\n' }, { ' ', '0', '+' }, { '\n' } }; // LAST TWO SPACE ON 0
+			{ '.', ',', '?', '!', '"', '/', '-', '@', '$', '%', '&', '*', '#', '(', ')', '_', '1' },
+			{ 'а', 'б', 'в', 'г', 'А', 'Б', 'В', 'Г', '2' }, { 'д', 'е', 'ё', 'ж', 'з', 'Д', 'Е', 'Ё', 'Ж', 'З', '3' },
+			{ 'и', 'й', 'к', 'л', 'И', 'Й', 'К', 'Л', '4' }, { 'м', 'н', 'о', 'п', 'М', 'Н', 'О', 'П', '5' },
+			{ 'р', 'с', 'т', 'у', 'Р', 'С', 'Т', 'У', '6' }, { 'ф', 'х', 'ц', 'ч', 'Ф', 'Х', 'Ц', 'Ч', '7' },
+			{ 'ш', 'щ', 'ъ', 'ы', 'Ш', 'Щ', 'Ъ', 'Ы', '8' }, { 'ь', 'э', 'ю', 'я', 'Ь', 'Э', 'Ю', 'Я', '9' },
+			{ ' ', '\n' }, { ' ', '0', '+' }, { '\n' } }; // LAST TWO SPACE ON 0
 
 	protected static final char[][] DET9TABLE = {
-		{ '0', '+' },
-		{ '.', ',', '?', '!', ':', ';', '"', '\'', '-', '@', '^', '€', '$', '%', '&', '*', '#', '(', ')', '_', '1' },
-		{ 'a', 'b', 'c', 'A', 'B', 'C', 'ä', 'Ä','á', 'â', 'à', 'å', 'ç', 'Á', 'Â', 'À', 'Å', 'Ç', '2' },
-		{ 'd', 'e', 'f', 'D', 'E', 'F', 'é','ë','è','ê', 'É', 'Ë', 'È', 'Ê', '3' },
-		{ 'g', 'h', 'i', 'G', 'H', 'I', 'í', 'ï', 'Í', 'Ï', '4' },
-		{ 'j', 'k', 'l', 'J', 'K', 'L', '5' },
-		{ 'm', 'n', 'o', 'M', 'N', 'O', 'ö', 'Ö', 'ñ','ó','ô', 'Ñ', 'Ó', 'Ô', '6' },
-		{ 'p', 'q', 'r', 's', 'P', 'Q', 'R', 'S', 'ß', '7' },
-		{ 't', 'u', 'v', 'T', 'U', 'V', 'ü', 'Ü', 'û', 'Û', '8' },
-		{ 'w', 'x', 'y', 'z', 'W', 'X', 'Y', 'Z', '9' },
-		{ ' ', '\n' }, { ' ', '0', '+' }, { '\n' } }; // LAST TWO SPACE ON 0
+			{ '0', '+' },
+			{ '.', ',', '?', '!', ':', ';', '"', '\'', '-', '@', '^', '€', '$', '%', '&', '*', '#', '(', ')', '_', '1' },
+			{ 'a', 'b', 'c', 'A', 'B', 'C', 'ä', 'Ä','á', 'â', 'à', 'å', 'ç', 'Á', 'Â', 'À', 'Å', 'Ç', '2' },
+			{ 'd', 'e', 'f', 'D', 'E', 'F', 'é','ë','è','ê', 'É', 'Ë', 'È', 'Ê', '3' },
+			{ 'g', 'h', 'i', 'G', 'H', 'I', 'í', 'ï', 'Í', 'Ï', '4' },
+			{ 'j', 'k', 'l', 'J', 'K', 'L', '5' },
+			{ 'm', 'n', 'o', 'M', 'N', 'O', 'ö', 'Ö', 'ñ','ó','ô', 'Ñ', 'Ó', 'Ô', '6' },
+			{ 'p', 'q', 'r', 's', 'P', 'Q', 'R', 'S', 'ß', '7' },
+			{ 't', 'u', 'v', 'T', 'U', 'V', 'ü', 'Ü', 'û', 'Û', '8' },
+			{ 'w', 'x', 'y', 'z', 'W', 'X', 'Y', 'Z', '9' },
+			{ ' ', '\n' }, { ' ', '0', '+' }, { '\n' } }; // LAST TWO SPACE ON 0
 
 	protected static final char[][] FRT9TABLE = {
-		{ '0', '+' },
-		{ '.', ',', '?', '!', ':', ';', '"', '/', '-', '@', '^', '€', '$', '%', '&', '*', '#', '(', ')', '_', '1' },
-		{ 'a', 'b', 'c', 'A', 'B', 'C', '2', 'â', 'à', 'æ', 'ç', 'Â', 'À', 'Æ', 'Ç'},
-		{ 'd', 'e', 'f', 'D', 'E', 'F', '3', 'é', 'è','ê', 'ë', 'É', 'È', 'Ê', 'Ë' },
-		{ 'g', 'h', 'i', 'G', 'H', 'I', '4', 'î', 'ï', 'Î', 'Ï' },
-		{ 'j', 'k', 'l', 'J', 'K', 'L', '5' },
-		{ 'm', 'n', 'o', 'M', 'N', 'O', '6', 'ô', 'œ', 'Ô', 'Œ'},
-		{ 'p', 'q', 'r', 's', 'P', 'Q', 'R', 'S', '7' },
-		{ 't', 'u', 'v', 'T', 'U', 'V', '8', 'û', 'Û', 'ù', 'Ù', 'ü', 'Ü'},
-		{ 'w', 'x', 'y', 'z', 'W', 'X', 'Y', 'Z', '9' },
-		{ ' ', '\n' }, { ' ', '0', '+' }, { '\n' } }; // LAST TWO SPACE ON 0
+			{ '0', '+' },
+			{ '.', ',', '?', '!', ':', ';', '"', '/', '-', '@', '^', '€', '$', '%', '&', '*', '#', '(', ')', '_', '1' },
+			{ 'a', 'b', 'c', 'A', 'B', 'C', '2', 'â', 'à', 'æ', 'ç', 'Â', 'À', 'Æ', 'Ç'},
+			{ 'd', 'e', 'f', 'D', 'E', 'F', '3', 'é', 'è','ê', 'ë', 'É', 'È', 'Ê', 'Ë' },
+			{ 'g', 'h', 'i', 'G', 'H', 'I', '4', 'î', 'ï', 'Î', 'Ï' },
+			{ 'j', 'k', 'l', 'J', 'K', 'L', '5' },
+			{ 'm', 'n', 'o', 'M', 'N', 'O', '6', 'ô', 'œ', 'Ô', 'Œ'},
+			{ 'p', 'q', 'r', 's', 'P', 'Q', 'R', 'S', '7' },
+			{ 't', 'u', 'v', 'T', 'U', 'V', '8', 'û', 'Û', 'ù', 'Ù', 'ü', 'Ü'},
+			{ 'w', 'x', 'y', 'z', 'W', 'X', 'Y', 'Z', '9' },
+			{ ' ', '\n' }, { ' ', '0', '+' }, { '\n' } }; // LAST TWO SPACE ON 0
 
 	protected static final char[][] ITT9TABLE = {
-		{ '+', '0' },
-		{ '.', ',', '?', '!', ':', ';', '"', '/', '-', '@', '^', '€', '$', '%', '&', '*', '#', '(', ')', '_', '1' },
-		{ 'a', 'b', 'c', 'A', 'B', 'C', 'à', 'À', '2' }, { 'd', 'e', 'f', 'D', 'E', 'F', 'é', 'è', 'É', 'È', '3' },
-		{ 'g', 'h', 'i', 'G', 'H', 'I', 'ì', 'Ì', '4' }, { 'j', 'k', 'l', 'J', 'K', 'L', '5' },
-		{ 'm', 'n', 'o', 'M', 'N', 'O', 'ò', 'Ò', '6' }, { 'p', 'q', 'r', 's', 'P', 'Q', 'R', 'S', '7' },
-		{ 't', 'u', 'v', 'T', 'U', 'V', 'ù', 'Ù', '8' }, { 'w', 'x', 'y', 'z', 'W', 'X', 'Y', 'Z', '9' },
-		{ ' ', '\n' }, { ' ', '0', '+' }, { '\n' } }; // LAST TWO SPACE ON 0
+			{ '+', '0' },
+			{ '.', ',', '?', '!', ':', ';', '"', '/', '-', '@', '^', '€', '$', '%', '&', '*', '#', '(', ')', '_', '1' },
+			{ 'a', 'b', 'c', 'A', 'B', 'C', 'à', 'À', '2' }, { 'd', 'e', 'f', 'D', 'E', 'F', 'é', 'è', 'É', 'È', '3' },
+			{ 'g', 'h', 'i', 'G', 'H', 'I', 'ì', 'Ì', '4' }, { 'j', 'k', 'l', 'J', 'K', 'L', '5' },
+			{ 'm', 'n', 'o', 'M', 'N', 'O', 'ò', 'Ò', '6' }, { 'p', 'q', 'r', 's', 'P', 'Q', 'R', 'S', '7' },
+			{ 't', 'u', 'v', 'T', 'U', 'V', 'ù', 'Ù', '8' }, { 'w', 'x', 'y', 'z', 'W', 'X', 'Y', 'Z', '9' },
+			{ ' ', '\n' }, { ' ', '0', '+' }, { '\n' } }; // LAST TWO SPACE ON 0
 
 	protected static final char[][] UKT9TABLE = { { '0', '+' },
-		{ '.', ',', '?', '!', '\'', '"', '/', '-', '@', '$', '%', '&', '*', '#',  '(', ')', '_', '1' },
-		{ 'а', 'б', 'в', 'г', 'ґ', 'А', 'Б', 'В', 'Г', 'Ґ', '2' }, { 'д', 'е', 'є', 'ж', 'з', 'Д', 'Е', 'Є', 'Ж', 'З', '3' },
-		{ 'и', 'і', 'ї', 'й', 'к', 'л', 'И', 'І', 'Ї', 'Й', 'К', 'Л', '4' }, { 'м', 'н', 'о', 'п', 'М', 'Н', 'О', 'П', '5' },
-		{ 'р', 'с', 'т', 'у', 'Р', 'С', 'Т', 'У', '6' }, { 'ф', 'х', 'ц', 'ч', 'Ф', 'Х', 'Ц', 'Ч', '7' },
-		{ 'ш', 'щ', 'Ш', 'Щ', '8' }, { 'ь', 'ю', 'я', 'Ь', 'Ю', 'Я', '9' },
-		{ ' ', '\n' }, { ' ', '0', '+' }, { '\n' } }; // LAST TWO SPACE ON 0
+			{ '.', ',', '?', '!', '\'', '"', '/', '-', '@', '$', '%', '&', '*', '#',  '(', ')', '_', '1' },
+			{ 'а', 'б', 'в', 'г', 'ґ', 'А', 'Б', 'В', 'Г', 'Ґ', '2' }, { 'д', 'е', 'є', 'ж', 'з', 'Д', 'Е', 'Є', 'Ж', 'З', '3' },
+			{ 'и', 'і', 'ї', 'й', 'к', 'л', 'И', 'І', 'Ї', 'Й', 'К', 'Л', '4' }, { 'м', 'н', 'о', 'п', 'М', 'Н', 'О', 'П', '5' },
+			{ 'р', 'с', 'т', 'у', 'Р', 'С', 'Т', 'У', '6' }, { 'ф', 'х', 'ц', 'ч', 'Ф', 'Х', 'Ц', 'Ч', '7' },
+			{ 'ш', 'щ', 'Ш', 'Щ', '8' }, { 'ь', 'ю', 'я', 'Ь', 'Ю', 'Я', '9' },
+			{ ' ', '\n' }, { ' ', '0', '+' }, { '\n' } }; // LAST TWO SPACE ON 0
 
-	protected static final char[][] HET9TABLE = { { '0', '+' },
-		{ '.', ',', '?', '!', '"', '/', '-', '@', '$', '%', '&', '*', '#', '(', ')', '_', '1' },
-		{ 'ד', 'ה', 'ו', '2' }, { 'א', 'ב', 'ג', '3' },
-		{ 'מ', 'ם', 'נ', 'ן', '4' }, { 'י', 'כ', 'ך', 'ל', '5' },
-		{ 'ז', 'ח', 'ט', '6' }, { 'ר', 'ש', 'ת', '7' },
-		{ 'צ', 'ץ', 'ק', '8' }, { 'ס', 'ע', 'פ', 'ף', '9' },
-		{ ' ', '\n' }, { ' ', '0', '+' }, { '\n' } }; // LAST TWO SPACE ON 0
+	protected static final char[][] EST9TABLE = {
+			{ '+', '0' },
+			{ '.', ',', '?', '!', ':', ';', '"', '/', '-', '@', '^', '€', '$', '%', '&', '*', '#', '(', ')', '_', '1' },
+			{ 'a', 'b', 'c', 'A', 'B', 'C', 'á', 'Á', '2' }, { 'd', 'e', 'f', 'D', 'E', 'F', 'é', 'É', '3' },
+			{ 'g', 'h', 'i', 'G', 'H', 'I', 'í', 'Í', '4' }, { 'j', 'k', 'l', 'J', 'K', 'L', '5' },
+			{ 'm', 'n', 'ñ', 'o', 'M', 'N', 'Ñ', 'O', 'ó', 'Ó', '6' }, { 'p', 'q', 'r', 's', 'P', 'Q', 'R', 'S', '7' },
+			{ 't', 'u', 'v', 'T', 'U', 'V', 'ú', 'Ú', '8' }, { 'w', 'x', 'y', 'z', 'W', 'X', 'Y', 'Z', '9' },
+			{ ' ', '\n' }, { ' ', '0', '+' }, { '\n' } }; // LAST TWO SPACE ON 0
 
-	protected static final char[][][] T9TABLE = { ENT9TABLE, RUT9TABLE, DET9TABLE, FRT9TABLE, ITT9TABLE, UKT9TABLE, HET9TABLE };
+	protected static final char[][][] T9TABLE = { ENT9TABLE, RUT9TABLE, DET9TABLE, FRT9TABLE, ITT9TABLE, UKT9TABLE, EST9TABLE };
 
 	// last 2 don't matter, are for spaceOnZero extra 'slots' 0 position, and 10 position
 	protected static final int[] ENT9CAPSTART = { 0, 0, 3, 3, 3, 3, 3, 4, 3, 4, 0,	 0, 0 };
@@ -187,8 +165,8 @@ public class CharMap {
 	protected static final int[] FRT9CAPSTART = { 0, 0, 3, 3, 3, 3, 3, 4, 3, 4, 0,	 0, 0 };
 	protected static final int[] ITT9CAPSTART = { 0, 0, 3, 3, 3, 3, 3, 4, 3, 4, 0,	 0, 0 };
 	protected static final int[] UKT9CAPSTART = { 0, 0, 5, 5, 6, 4, 4, 4, 2, 3, 0,	 0, 0 };
-	protected static final int[] HET9CAPSTART = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,	 0, 0 }; // no CAPS on Hebrew
-	protected static final int[][] T9CAPSTART = {ENT9CAPSTART, RUT9CAPSTART, DET9CAPSTART, FRT9CAPSTART, ITT9CAPSTART, UKT9CAPSTART, HET9CAPSTART};
+	protected static final int[] EST9CAPSTART = { 0, 0, 3, 3, 3, 3, 3, 4, 3, 4, 0,	 0, 0 };
+	protected static final int[][] T9CAPSTART = {ENT9CAPSTART, RUT9CAPSTART, DET9CAPSTART, FRT9CAPSTART, ITT9CAPSTART, UKT9CAPSTART, EST9CAPSTART};
 
 	protected static String getStringSequence(String word, LANGUAGE lang) {
 		StringBuilder seq = new StringBuilder();
