@@ -714,9 +714,7 @@ public class TraditionalT9Settings extends ListActivity implements
 	@Override
 	protected  void onListItemClick(ListView l, View v, int position, long id) {
 		Setting s = (Setting)getListView().getItemAtPosition(position);
-		if (s.id.equals("github"))
-			openGithub();
-		else if (s.id.equals("keyboard_Manger"))
+		 if (s.id.equals("keyboard_Manger"))
 			MangeKey();
 		else if (s.id.equals("loaddict"))
 			preloader(R.string.pref_loadingdict, true, false);
@@ -753,11 +751,6 @@ public class TraditionalT9Settings extends ListActivity implements
 			s.clicked(mContext);
 	}
 
-	private void openGithub() {
-		Intent i = new Intent(Intent.ACTION_VIEW);
-		i.setData(Uri.parse(getString(R.string.help_url)));
-		startActivity(i);
-	}
 	private void MangeKey() {
 		InputMethodManager imeManager = (InputMethodManager) getApplicationContext().getSystemService(INPUT_METHOD_SERVICE); imeManager.showInputMethodPicker();
 	}

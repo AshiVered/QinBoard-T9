@@ -923,8 +923,6 @@ public class TraditionalT9 extends InputMethodService implements
 			if (mKeyMode != MODE_NUM) {
 				if (mLangsAvailable.length > 1) {
 					nextLang();
-				} else {
-					showSmileyPage(); // TODO: replace with lang select if lang thing
 				}
 			//	return false;
 			}

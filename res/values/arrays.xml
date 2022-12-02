@@ -18,7 +18,7 @@
 		<item>French</item>
 		<item>Italian</item>
 		<item>Ukrainian</item>
-		<item>Spanish</item>	
+		<item>Spanish</item>		
 	</string-array>
 	<!--pref_lang_titles pair with pref_lang_values -->
 	<integer-array translatable="false" name="pref_lang_values">

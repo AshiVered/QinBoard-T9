@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string translatable="false" name="help_url">https://github.com/AshiVered/QinBoard-T9/</string>
+	<string translatable="false" name="help_url">https://github.com/AshiVered/QinBoard-T9</string>
 	<string name="app_name">QinBoard T9</string>
 	<string name="ime_name">QinBoard T9</string>
 	<string name="ime_number">Numbers</string>
@@ -18,7 +18,7 @@
 	<string name="symbol_next">Next Page</string>
 	<string name="symbol_prev">Prev Page</string>
 	<string name="symbol_insert">Insert Symbol</string>
-	<string name="smiley_insert">Insert Symbol</string>
+	<string name="smiley_insert">Insert Smiley</string>
 	<string name="symbol_page">Page: %1$s/%2$s</string>
 
 	<string name="add_word">Add word</string>
@@ -38,10 +38,10 @@
 	<string name="updating_database_unavailable">Updating dictionary database, word input unavailable at this time.</string>
 
 	<string name="pref_lang_title">Multilingual support…</string>
-	<string name="pref_github">Github</string>
+	<string name="pref_help">"Github</string>
 	<string name="pref_loaddict">Load dictionary</string>
 	<string name="pref_loaduserdict">Load user dictionary</string>
-	<string translatable="false" name="pref_loaduserdictdesc">SDcard/traditionalt9/user.lang.dict (lang: en/ru/de/fr/it/uk/he)</string>
+	<string translatable="false" name="pref_loaduserdictdesc">SDcard/traditionalt9/user.lang.dict (lang: en/ru/de/fr)</string>
 	<string name="pref_nukedict">Nuke dictionary</string>
 	<string name="pref_backupdict">Backup dictionary</string>
 	<string name="pref_restoredict">Restore dictionary</string>
