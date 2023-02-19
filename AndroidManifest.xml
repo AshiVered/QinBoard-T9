@@ -6,6 +6,7 @@
 
 	<uses-sdk android:minSdkVersion="8" />
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="MANAGE_EXTERNAL_STORAGE" />
 	<uses-configuration
 		android:reqFiveWayNav="true"
 		android:reqHardKeyboard="true"
@@ -23,6 +24,7 @@
         android:theme="@style/AppTheme" >
         <service
             android:name="org.nyanya.android.traditionalt9.TraditionalT9"
+			android:exported="true"
             android:permission="android.permission.BIND_INPUT_METHOD" >
             <intent-filter>
                 <action android:name="android.view.InputMethod" />
@@ -37,6 +39,7 @@
 
         <activity
             android:name="org.nyanya.android.traditionalt9.TraditionalT9Settings"
+			android:exported="true"
             android:label="@string/traditionalt9_settings" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

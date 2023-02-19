@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string translatable="false" name="help_url">https://github.com/AshiVered/QinBoard-T9/</string>
+	<string name="app_name">QinBoard T9</string>
+	<string name="ime_name">QinBoard T9</string>
+	<string name="ime_number">מספרים</string>
+	<string name="pref_inputmode">מצב קלט ברירת מחדל</string>
+	<string name="pref_inputmode_desc">מצב ברירת מחדל להזנת טקסט</string>
+	<string name="traditionalt9_settings">QinBoard T9 הגדרות</string>
+	<string name="main_left_insert">הוסף סמל</string>
+	<string name="main_left_addword">הוסף מילה</string>
+	<string name="main_mid">בוצע</string>
+	<string name="main_mid_commit">לבצע</string>
+	<string name="main_right_upper">מצב מחזור</string>
+	<string name="main_right_lower">אפשרויות</string>
+	<string name="main_left_notfound">להוסיף מילה?</string>
+	<string name="ricon_desc">החזק את הסמל</string>
+	<string name="symbol_next">עמוד הבא</string>
+	<string name="symbol_prev">עמוד קודם</string>
+	<string name="symbol_insert">הוסף סמל</string>
+	<string name="smiley_insert">הוסף סמל</string>
+	<string name="symbol_page">עמוד: %1$s/%2$s</string>
+
+	<string name="add_word">הוסף מילה</string>
+	<string name="close">סגור</string>
+	<string name="add_word_blank">מילה ריקה לא נוספה.</string>
+	<string name="add_word_badchar">אי אפשר להוסיף מילה עם תווים שאינם נמצאים במפת המקשים של %1$s (%2$s).</string>
+	<string name="add_word_exist1">המילה (%1$s) קיימת.</string>
+	<string name="add_word_exist2">המילה (%1$s) קיימת עבור %2$s.</string>
+	<string name="title_activity_add_word">הוסף מילה</string>
+	<string name="action_settings">הגדרות</string>
+	<string name="database_notready">מסד נתונים לא זמין.</string>
+	<string name="database_settings_notready">מסד נתונים לא זמין,משתמש בהגדרות ברירת מחדל.</string>
+
+	<string name="updating_database_title">מעדכן את מסד הנתונים של המילון...</string>
+	<string name="updating_database">מעדכן את מסד הנתונים של המילון, זה עשוי לקחת זמן מה.</string>
+	<string name="updating_database_done">הושלם עדכון מסד הנתונים של מילון.</string>
+	<string name="updating_database_unavailable">מעדכן את מסד הנתונים של המילון, הקלדת מילים אינה זמינה בשלב זה.</string>
+
+	<string name="pref_lang_title">תמיכה רב לשונית…</string>
+	<string name="pref_github">"Github</string>
+	<string name="pref_loaddict">טעינת מילון</string>
+	<string name="pref_loaduserdict">טעינת מילון משתמש</string>
+    <string name="pref_nukedict">מחיקת מילון</string>
+	<string name="pref_backupdict">גיבוי מילון</string>
+	<string name="pref_restoredict">שיחזור מילון</string>
+	<string name="pref_querytest">Query test</string>
+	<string name="pref_testfunc">Test func</string>
+
+	<string name="pref_mode_notify">התראות מצב</string>
+	<string name="pref_mode_notify_subtitle">משמש להקצאת שינויים במצב</string>
+
+	<string name="pref_loadingdict">טוען מילון...</string>
+	<string name="pref_loadinguserdict">טוען מילון משתמש...</string>
+	<string name="pref_load_title">טוען מילון</string>
+	<string name="pref_loadingbackup">משחזר מילון...</string>
+	<string name="pref_savingbackup">מגבה מילון...</string>
+	<string name="pref_nukingdict">מוחק מילון... אנא המתן...</string>
+	<string name="pref_loaduser_notfound">מילון עבור %1$s לא נמצא. לא נטען.</string>
+
+	<string name="pref_backup_warn">אזהרה: קיים גיבוי מסד נתונים קיים. האם ברצונך להחליף?</string>
+	<string name="pref_backup_title">גיבוי מסד נתוני IME</string>
+	<string name="pref_backup_noext">שגיאה: אין אחסון חיצוני זמין לגיבוי. הגיבוי לא ימשיך.</string>
+	<string name="pref_restore_warn">ערכי מסד נתונים גיבוי יחליפו ערכי מסד נתונים קיימים. ערכים שאינם בגיבוי יישמרו. אם התנהגות זו אינה רצויה בחר \"%1$s\" לפני בחירת אפשרות זו.</string>
+	<string name="pref_restore_title">שיחזור מסד נתוני IME</string>
+	<string name="pref_restore_noext">שגיאה: אין אחסון חיצוני זמין לשחזור. השחזור לא ימשיך.</string>
+	<string name="pref_restore_nofile">שגיאה: אין קובץ גיבוי זמין</string>
+	<string name="pref_nuke_warn">אזהרה: פעולה זו תמחק את כל המילון שלך. האם אתה רוצה להמשיך?</string>
+	<string name="pref_nuke_title">מוחק מילוון</string>
+	<string name="pref_reloadKeys">טען מחדש KeyMap</string>
+	<string name="pref_reloadKeysSum">כפה טעינה מחדש של עקיפות מיפוי מפתח</string>
+	<string name="pref_reloadKeysDone">טעינה מחדש הושלמה</string>
+	<string name="pref_reloadKeysDoneWE">הטעינה הושלמה עם שגיאות (בדוק logcat.)</string>
+	<string name="pref_reloadKeysNoFile">לא נמצא קובץ keymap.txt.</string>
+	<string name="pref_keyRemap">תרגם מפתחות</string>
+	<string name="pref_keyRemapSum">אפשר לשלוח מפתחות מתורגמים לאפליקציות, אחרת מפת המקשים מיועדת ל-IME בלבד.</string>
+	<string name="pref_spaceOnZero">Space on 0 key</string>
+	<string name="pref_noSoftButtons">No soft buttons</string>
+	<string name="pref_noSoftButtonsSum">Not show soft buttons, implies \"Space on 0 key\" (Use # to change input mode)</string>
+	<string name="candidate_view_add_word">הוסף</string>
+	<string name="hello_world">Hello world!</string>
+    <string name="dev_info">QinBoard T9 by A.I.V V5.0</string>
+	<string name="prev">הקודם</string>
+	<string name="next">הבא</string>
+    <string name="keyboard_Manger">הגדר כמקלדת ברירת מחדל</string>
+    <string name="about">אודות</string>
+    <string name="pref_loaduserdictdesc">אחסון מקומי/QinBoardT9/user.lang.dict (lang: en/ru/de/fr/it/uk/he)</string>
+
+</resources>

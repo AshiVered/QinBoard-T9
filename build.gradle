@@ -106,10 +106,10 @@ android {
 
 	defaultConfig {
 		minSdkVersion 19
-		targetSdkVersion 30
-        versionCode 4
-        versionName computeVersionName()
-        applicationId 'aiv.ashivered.qinboard.t9.hebrow'
+        targetSdk 31
+        versionCode 5
+        versionName 'v5'
+        applicationId 'aiv.ashivered.qinboard.t9'
     }
 
 	// http://stackoverflow.com/a/19130098

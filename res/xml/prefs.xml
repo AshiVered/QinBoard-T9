@@ -20,5 +20,6 @@
 	<Setting title="@string/pref_nukedict" id="nukedict"/>
 	<Setting title="@string/pref_backupdict" id="backupdict"/>
 	<Setting title="@string/pref_restoredict" id="restoredict"/>
-	<Setting title="@string/dev_info" id="developer"/>
+	<Setting title="@string/about" summary="@string/dev_info" id="developer"/>
+	<Setting title="@string/pref_github" id="github"/>
 </Settings>

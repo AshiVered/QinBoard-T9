@@ -267,7 +267,7 @@ public abstract class AbsSymDialog extends Dialog implements
 				sendChar(pageoffset + 7);
 				break;
 			case KeyEvent.KEYCODE_9:
-				sendChar(pageoffset + 9);
+				sendChar(pageoffset + 8);
 				break;
 			case KeyEvent.KEYCODE_0:
 				sendChar(pageoffset + 9);
