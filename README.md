@@ -14,6 +14,7 @@ See Wiki for more information&setup guide: [QinBoard T9 keypad IME for Android](
 3. Add setup option (to make the keyboard easier to operate and set it to a default input method)
 4. Setting classic typing (without text prediction) by default, so that it is possible to use the keyboard even before loading the dictionary.
 5. Add more languages
+6. A more modern UI.
 # Download
 QinBoard-T9 (this fork):
 from the [releases page](https://github.com/AshiVered/QinBoard-T9/releases).
