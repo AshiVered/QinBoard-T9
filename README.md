@@ -1,5 +1,5 @@
-# QinBoard T9 keypad IME for Android. (fork of
-https://github.com/Clam-/TraditionalT9/.)
+# QinBoard T9 keypad IME for Android.
+(fork of https://github.com/Clam-/TraditionalT9/.)
 
 This is a Input Method Editor for Android that implements predictive text using the hardware keypad on the device. **Useless without a hardware numerical keypad.**
 
