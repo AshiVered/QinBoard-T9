@@ -7,6 +7,12 @@ This fork has been specially adapted for Qin devices, but it works for any devic
 Also, this fork is with a keymap similar to that of Nokia devices, and not like the original project - where it is a Sony Ericsson keymap.
 
 See Wiki for more information&setup guide: [Traditional T9 keypad IME for Android](https://github.com/AshiVered/QinBoard-T9/wiki)
+
+# To-do list
+1. fix [this issue](https://github.com/sspanak/tt9/issues/182) in QinBoard T9.
+2. Add help screen
+3. Add setup option (to make the keyboard easier to operate and set it to a default input method)
+4. Setting classic typing (without text prediction) by default, so that it is possible to use the keyboard even before loading the dictionary.
 # Download
 QinBoard-T9 (this fork):
 from the [releases page](https://github.com/AshiVered/QinBoard-T9/releases).
