@@ -6,7 +6,7 @@ This is a Input Method Editor for Android that implements predictive text using 
 This fork has been specially adapted for Qin devices, but it works for any device where the backspace key is in the "back" key.
 Also, this fork is with a keymap similar to that of Nokia devices, and not like the original project - where it is a Sony Ericsson keymap.
 
-See Wiki for more information&setup guide: [Traditional T9 keypad IME for Android](https://github.com/AshiVered/QinBoard-T9/wiki)
+See Wiki for more information&setup guide: [QinBoard T9 keypad IME for Android](https://github.com/AshiVered/QinBoard-T9/wiki)
 
 # To-do list
 1. fix [this issue](https://github.com/sspanak/tt9/issues/182) in QinBoard T9.
