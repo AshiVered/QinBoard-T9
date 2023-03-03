@@ -81,7 +81,7 @@
 	<string name="candidate_view_add_word">Add</string>
 	<string name="hello_world">Hello world!</string>
 	<string name="about">About</string>
-	<string name="dev_info" translatable="false">QinBoard T9 by A.I.V V5.0</string>
+	<string name="dev_info" translatable="false">QinBoard T9 by A.I.V V5.1-beta</string>
 	<string name="prev">previous</string>
 	<string name="next">next</string>
 	<string name="keyboard_Manger">Set as default keyboard</string>
