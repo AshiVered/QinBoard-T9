@@ -66,7 +66,7 @@ public class T9DB {
 
 	public static class DBSettings {
 		public enum SETTING {
-			INPUT_MODE("pref_inputmode", 0, 0),
+			INPUT_MODE("pref_inputmode", 1, 0),
 			LANG_SUPPORT("pref_lang_support", 1, 1),
 			MODE_NOTIFY("pref_mode_notify", 0, 2),
 			LAST_LANG("set_last_lang", 1, 6),

@@ -66,7 +66,7 @@
 	<string name="pref_restore_noext">שגיאה: אין אחסון חיצוני זמין לשחזור. השחזור לא ימשיך.</string>
 	<string name="pref_restore_nofile">שגיאה: אין קובץ גיבוי זמין</string>
 	<string name="pref_nuke_warn">אזהרה: פעולה זו תמחק את כל המילון שלך. האם אתה רוצה להמשיך?</string>
-	<string name="pref_nuke_title">מוחק מילוון</string>
+	<string name="pref_nuke_title">מוחק מילון</string>
 	<string name="pref_reloadKeys">טען מחדש KeyMap</string>
 	<string name="pref_reloadKeysSum">כפה טעינה מחדש של עקיפות מיפוי מפתח</string>
 	<string name="pref_reloadKeysDone">טעינה מחדש הושלמה</string>
