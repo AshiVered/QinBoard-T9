@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- WHEN ADDING NEW SETTING KEY THAT STORES VALUE, ADD KEY AND QUERY TO T9DB -->
+<Settings>
+    <Setting title="@string/manual"  id="showManual"/>
+    <Setting title="@string/keyboard_Manger" id="keyboard_Manger"/>
+</Settings>

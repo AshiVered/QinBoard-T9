@@ -11,12 +11,13 @@ See Wiki for more information&setup guide: [QinBoard T9 keypad IME for Android](
 # To-do list
 1. fix [this issue](https://github.com/sspanak/tt9/issues/182) in QinBoard T9.
 2. ~~add symbol & smiley by long click on star~~ DONE! V3 and higher.
-3. Add help screen
+3. ~~Add help screen~~ DONE! V5.2-beta and higher
 4. Add setup option (to make the keyboard easier to operate and set it to a default input method) *Some of the changes have already been made in V4*
 5. ~~Setting classic typing (without text prediction) by default, so that it is possible to use the keyboard even before loading the dictionary.~~ DONE! V5.1-beta and higher
 6. Add more languages.
 7. A more modern UI. - *Some of the changes have already been made in V5.1-beta*
 8. ~~navigate through the words using the dial key (KEYCODE_CALL).~~ DONE! V4 and higher.
+9. Add option to new line.
 # Download
 QinBoard-T9 (this fork):
 from the [releases page](https://github.com/AshiVered/QinBoard-T9/releases).

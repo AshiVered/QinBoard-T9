@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- WHEN ADDING NEW SETTING KEY THAT STORES VALUE, ADD KEY AND QUERY TO T9DB -->
 <Settings>
+	<Setting title="@string/manual"  id="showManual"/>
 	<Setting title="@string/keyboard_Manger" id="keyboard_Manger"/>
 	<SettingList
 		id="pref_inputmode"
@@ -20,6 +21,5 @@
 	<Setting title="@string/pref_nukedict" id="nukedict"/>
 	<Setting title="@string/pref_backupdict" id="backupdict"/>
 	<Setting title="@string/pref_restoredict" id="restoredict"/>
-	<Setting title="@string/about" summary="@string/dev_info" id="developer"/>
 	<Setting title="@string/pref_github" id="github"/>
 </Settings>

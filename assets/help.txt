@@ -1,0 +1,36 @@
+ -------
+|setup|
+ -------
+
+1. Enable QinBoard T9 as an input method (via device settings)
+2. Set QinBoard T9 as default input method
+3. choose languages, and select default mode (dictionary, text ,number).
+4. if you select “dictionary”, you need to choose “Load dictionary” to use.
+5. now, you can to start typing! (but, some functions are aviable only after reboot.).
+ -----------
+|Hotkeys|
+ -----------
+DPAD LEFT:
+Scroll suggestions left
+
+DPAD RIGHT:
+Scroll suggestions right
+
+Star (*):
+Short press: switch mode (uppercase and lowercase letters).
+Long press: add symbol or smiley.
+
+Hash/Pound (#):
+Short press: change lang (if more than one language is selected).
+Long press  (not working in Qin1S+) : new line.
+
+ -----------
+|app info|
+ -----------
+
+QinBoard T9 V5.2-beta
+developed by A.I.V
+
+WHAT'S NEW?
+* add help screen.
+* Some changes to the user interface, with the hope of creating a more modern user interface. (needs quite a few more changes).

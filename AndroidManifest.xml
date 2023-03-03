@@ -1,31 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="org.nyanya.android.traditionalt9"
     android:versionCode="4"
-    android:versionName="git" >
+    android:versionName="git"
+    tools:ignore="ExtraText">
 
-	<uses-sdk android:minSdkVersion="8" />
-	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-	<uses-permission android:name="MANAGE_EXTERNAL_STORAGE" />
-	<uses-configuration
-		android:reqFiveWayNav="true"
-		android:reqHardKeyboard="true"
-		android:reqKeyboardType="qwerty"
-	/>
-	<uses-configuration
-		android:reqFiveWayNav="true"
-		android:reqKeyboardType="twelvekey"
-		android:reqHardKeyboard="true"
-		/>
+    <uses-sdk android:minSdkVersion="8" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="MANAGE_EXTERNAL_STORAGE" />
+
+    <uses-configuration
+        android:reqFiveWayNav="true"
+        android:reqHardKeyboard="true"
+        android:reqKeyboardType="qwerty" />
+    <uses-configuration
+        android:reqFiveWayNav="true"
+        android:reqHardKeyboard="true"
+        android:reqKeyboardType="twelvekey" />
+
     <application
         android:allowBackup="false"
         android:icon="@drawable/ic_launcher"
         android:label="@string/ime_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/Theme.AppCompat.Light">
+        <activity
+            android:name=".help"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light" />
+
         <service
-            android:name="org.nyanya.android.traditionalt9.TraditionalT9"
-			android:exported="true"
-            android:permission="android.permission.BIND_INPUT_METHOD" >
+            android:name=".TraditionalT9"
+            android:exported="true"
+            android:permission="android.permission.BIND_INPUT_METHOD">
             <intent-filter>
                 <action android:name="android.view.InputMethod" />
             </intent-filter>
@@ -34,24 +42,23 @@
                 android:name="android.view.im"
                 android:resource="@xml/method" />
         </service>
-
-		<service android:name=".DBUpdateService" />
+        <service android:name=".DBUpdateService" />
 
         <activity
-            android:name="org.nyanya.android.traditionalt9.TraditionalT9Settings"
-			android:exported="true"
-            android:label="@string/traditionalt9_settings" >
+            android:name=".TraditionalT9Settings"
+            android:exported="true"
+            android:label="@string/traditionalt9_settings">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-		<category android:name="android.intent.category.LAUNCHER" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:theme="@android:style/Theme.Dialog"
-            android:name="org.nyanya.android.traditionalt9.AddWordAct"
+            android:name=".AddWordAct"
+            android:excludeFromRecents="true"
             android:label="@string/title_activity_add_word"
-			android:excludeFromRecents="true" >
-        </activity>
-	</application>
+            android:theme="@android:style/Theme.Dialog" />
+    </application>
 
 </manifest>

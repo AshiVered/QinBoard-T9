@@ -4,7 +4,7 @@
 	<color name="candidate_recommended">#FF000000</color>
 	<color name="candidate_other">#FFA8A8A8</color>
 	<color name="candidate_background">#FFFFFFFF</color>
-	<color name="candidate_background_add">#e1ff00ff</color>
+	<color name="candidate_background_add">#FF000000</color>
 	<color name="button_focus">#FF2A9AEB</color>
 	<color name="button_default">#FFA8A8A8</color>
 	<color name="button_text">#FFFFFFFF</color>

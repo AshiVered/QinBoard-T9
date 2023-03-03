@@ -79,10 +79,14 @@
 	<string name="pref_noSoftButtonsSum">Not show soft buttons, implies \"Space on 0 key\" (Use # to change input mode)</string>
 	<string name="candidate_view_add_word">הוסף</string>
 	<string name="hello_world">Hello world!</string>
+    <string name="dev_info">QinBoard T9 by A.I.V V5.0</string>
 	<string name="prev">הקודם</string>
 	<string name="next">הבא</string>
     <string name="keyboard_Manger">הגדר כמקלדת ברירת מחדל</string>
     <string name="about">אודות</string>
     <string name="pref_loaduserdictdesc">אחסון מקומי/QinBoardT9/user.lang.dict (lang: en/ru/de/fr/it/uk/he)</string>
+	<string name="help">help_iw.txt</string>
+	<string name="manual">מדריך למשתמש</string>
+
 
 </resources>

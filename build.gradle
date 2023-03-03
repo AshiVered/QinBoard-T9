@@ -12,6 +12,9 @@ apply plugin: 'android'
 
 dependencies {
 	implementation "androidx.core:core:1.5.0"
+    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 }
 
 repositories {
@@ -80,7 +83,7 @@ def computeVersionNumber = { ->
 }
 
 android {
-	compileSdkVersion 30
+	compileSdkVersion 33
 	buildToolsVersion "32.0.0"
 
 	sourceSets {
@@ -106,7 +109,7 @@ android {
 
 	defaultConfig {
 		minSdkVersion 19
-        targetSdk 31
+        targetSdk 33
         versionCode 5
         versionName 'v5'
         applicationId 'aiv.ashivered.qinboard.t9'
@@ -116,9 +119,9 @@ android {
 	signingConfigs {
 		release {
        			storeFile file("my-release-key.keystore")
-       			storePassword "9381381"
-       			keyAlias "aiv"
-       			keyPassword "9381381"
+       			storePassword "STOREPASS"
+       			keyAlias "ALIAS"
+       			keyPassword "PASS"
 		}
 	}
 

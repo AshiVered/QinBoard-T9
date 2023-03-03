@@ -728,6 +728,8 @@ public class TraditionalT9Settings extends ListActivity implements
 			backupDict();
 		else if (s.id.equals("restoredict"))
 			restoreDict();
+		else if (s.id.equals("showManual"))
+			startActivity(new Intent(TraditionalT9Settings.this, help.class));
 		else if (s.id.equals("reloadKeys")) {
 			int msg = KeyMap.setKeys();
 			if (msg != 0) {
