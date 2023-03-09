@@ -82,11 +82,13 @@
     <string name="dev_info">QinBoard T9 by A.I.V V5.0</string>
 	<string name="prev">הקודם</string>
 	<string name="next">הבא</string>
-    <string name="keyboard_Manger">הגדר כמקלדת ברירת מחדל</string>
+    <string name="keyboard_Manger">הגדרה</string>
     <string name="about">אודות</string>
     <string name="pref_loaduserdictdesc">אחסון מקומי/QinBoardT9/user.lang.dict (lang: en/ru/de/fr/it/uk/he)</string>
 	<string name="help">help_iw.txt</string>
 	<string name="manual">מדריך למשתמש</string>
+	<string name="keyboard_settings">הפעל את Qinboard T9 כשיטת קלט</string>
+	<string name="IME_default">הגדר כמקלדת ברירת מחדל</string>
 
 
 </resources>

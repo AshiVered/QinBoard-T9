@@ -2,7 +2,7 @@
 |setup|
  -------
 
-1. Enable QinBoard T9 as an input method (via device settings)
+1. Enable QinBoard T9 as an input method
 2. Set QinBoard T9 as default input method
 3. choose languages, and select default mode (dictionary, text ,number).
 4. if you select “dictionary”, you need to choose “Load dictionary” to use.
@@ -28,9 +28,12 @@ Long press  (not working in Qin1S+) : new line.
 |app info|
  -----------
 
-QinBoard T9 V5.2-beta
+QinBoard T9 V6
 developed by A.I.V
 
 WHAT'S NEW?
+* add setup screen.
 * add help screen.
 * Some changes to the user interface, with the hope of creating a more modern user interface. (needs quite a few more changes).
+* fix bugs in hebrew wordlist.
+Setting classic typing (without text prediction) by default, so that it is possible to use the keyboard even before loading the dictionary.

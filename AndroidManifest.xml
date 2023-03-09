@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="org.nyanya.android.traditionalt9"
-    android:versionCode="4"
+    android:versionCode="6"
     android:versionName="git"
     tools:ignore="ExtraText">
 
@@ -25,6 +25,10 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/ime_name"
         android:theme="@style/Theme.AppCompat.Light">
+        <activity
+            android:name=".KeyboardActivity"
+            android:exported="true"
+        />
         <activity
             android:name=".help"
             android:exported="true"

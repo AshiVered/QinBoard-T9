@@ -761,7 +761,8 @@ public class TraditionalT9Settings extends ListActivity implements
 		startActivity(i);
 	}
 	private void MangeKey() {
-		InputMethodManager imeManager = (InputMethodManager) getApplicationContext().getSystemService(INPUT_METHOD_SERVICE); imeManager.showInputMethodPicker();
+		Intent intent = new Intent(this, KeyboardActivity.class);
+		startActivity(intent);
 	}
 
 	// LoadDictTask(int msgid, boolean intern, boolean restorebackup, CheckBoxPreference setting)
