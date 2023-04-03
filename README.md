@@ -30,5 +30,11 @@ Do what you want, but keep the following in mind:
 2. Name of the application (QinBoard T9).
 3. "Developed By A.I.V" in the application settings.
 
+# Support me
+I develop this project voluntarily, to benefit the community. But it's not an easy job with a lot of investment...
+If you want to support me, [buy me a coffee ☕](https://www.buymeacoffee.com/ashivered)
+
+
+
 I LOVE ISRAEL.
 Enjoy!
