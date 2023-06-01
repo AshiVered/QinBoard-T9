@@ -82,8 +82,8 @@
     <string name="hello_world">Привет, мир!</string>
     <string name="about">О программе</string>
     <string name="dev_info" translatable="false">QinBoard T9 by A.I.V V5.0</string>
-    <string name="prev">предыдущий</string>
-    <string name="next">следующий</string>
+    <string name="prev">пред</string>
+    <string name="next">след</string>
     <string name="keyboard_Manger">Настройка</string>
     <string name="help">help.txt</string>
     <string name="manual">Руководство</string>
