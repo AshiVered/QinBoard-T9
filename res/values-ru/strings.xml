@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="help_url" translatable="false">https://github.com/AshiVered/QinBoard-T9/</string>
+    <string name="app_name">QinBoard T9</string>
+    <string name="ime_name">QinBoard T9</string>
+    <string name="ime_number">Числа</string>
+    <string name="pref_inputmode">Режим ввода</string>
+    <string name="pref_inputmode_desc">Режим по умолчанию для \'нормальных\' полей ввода</string>
+    <string name="traditionalt9_settings">Настройки QinBoard T9</string>
+    <string name="main_left_insert">Вставить символ</string>
+    <string name="main_left_addword">Добавить слово</string>
+    <string name="main_mid">Готово</string>
+    <string name="main_mid_commit">Применить</string>
+    <string name="main_right_upper">Циклический режим</string>
+    <string name="main_right_lower">Опции</string>
+    <string name="main_left_notfound">Добавить слово?</string>
+    <string name="ricon_desc">Иконка удержания</string>
+    <string name="symbol_next">Следующая страница</string>
+    <string name="symbol_prev">Предыдущая страница</string>
+    <string name="symbol_insert">Вставить символ</string>
+    <string name="smiley_insert">Вставить символ</string>
+    <string name="symbol_page">Страница: %1$s/%2$s</string>
+
+    <string name="add_word">Добавить слово</string>
+    <string name="close">Закрыть</string>
+    <string name="add_word_blank">Пустое слово не добавлено.</string>
+    <string name="add_word_badchar">Ошибка добавления слова: неотображаемый символ %1$s (%2$s).</string>
+    <string name="add_word_exist1">Слово (%1$s) уже в БД.</string>
+    <string name="add_word_exist2">Слово (%1$s) уже в БД для %2$s.</string>
+    <string name="title_activity_add_word">Добавить слово</string>
+    <string name="action_settings">Настройки</string>
+    <string name="database_notready">База данных недоступна.</string>
+    <string name="database_settings_notready">База данных недоступна. Использованы настройки по умолчанию.</string>
+
+    <string name="updating_database_title">Обновление БД словаря…</string>
+    <string name="updating_database">Обновление БД словаря, пожалуйста подождите.</string>
+    <string name="updating_database_done">Обновление БД словаря завершено.</string>
+    <string name="updating_database_unavailable">Обновление БД словаря, ввод слов временно недоступен.</string>
+
+    <string name="pref_lang_title">Поддержка языков…</string>
+    <string name="pref_github">Github</string>
+    <string name="pref_loaddict">Загрузить словарь</string>
+    <string name="pref_loaduserdict">Загрузить пользовательский словарь</string>
+    <string name="pref_loaduserdictdesc">internal storage/QinBoardT9/user.lang.dict (lang: en/ru/de/fr/it/uk/he)</string>
+    <string name="pref_nukedict">Удалить словарь</string>
+    <string name="pref_backupdict">Сохранить словарь</string>
+    <string name="pref_restoredict">Восстановить словарь</string>
+    <string name="pref_querytest">Тест запроса</string>
+    <string name="pref_testfunc">Тест функции</string>
+
+    <string name="pref_mode_notify">Уведомления о смене режима</string>
+    <string name="pref_mode_notify_subtitle">Используется для озвучивания смены режима</string>
+
+    <string name="pref_loadingdict">Загрузка словаря…</string>
+    <string name="pref_loadinguserdict">Загрузка пользовательского словаря…</string>
+    <string name="pref_load_title">Загрузить словарь IME</string>
+    <string name="pref_loadingbackup">Восстановление словаря…</string>
+    <string name="pref_savingbackup">Сохранение словаря…</string>
+    <string name="pref_nukingdict">Удаление словаря… Подождите…</string>
+    <string name="pref_loaduser_notfound">Словарь для %1$s не найден. Не загружаю.</string>
+
+    <string name="pref_backup_warn">Внимание: Найден существующий бэкап словаря. Хотите перезаписать?</string>
+    <string name="pref_backup_title">Сохранить словарь IME</string>
+    <string name="pref_backup_noext">Ошибка: Не найдено внешнее хранилище для бекапа. Сохранение невозможно.</string>
+    <string name="pref_restore_warn">Существующие в бекапе записи перезапишут имеющиеся записи в БД. Записи, которых нет в бекапе, будут сохранены без изменений. Если это не то, чего Вы хотите, выберите \"%1$s\" перед выбором этого пункта.</string>
+    <string name="pref_restore_title">Восстановить базу IME</string>
+    <string name="pref_restore_noext">Ошибка: Не найдено внешнее хранилище для восстановления. Восстановление невозможно.</string>
+    <string name="pref_restore_nofile">Ошибка: Файл бекапа не найден.</string>
+    <string name="pref_nuke_warn">Внимание: Ваш словарь будет полностью удален. Хотите продолжить?</string>
+    <string name="pref_nuke_title">Удалить словарь IME</string>
+    <string name="pref_reloadKeys">Перезагрузить KeyMap</string>
+    <string name="pref_reloadKeysSum">Принудительная перезагрузка назначений клавиш</string>
+    <string name="pref_reloadKeysDone">Перезагрузка завершена.</string>
+    <string name="pref_reloadKeysDoneWE">Перезагрузка завершена с ошибками (проверьте logcat.)</string>
+    <string name="pref_reloadKeysNoFile">Файл keymap.txt не найден.</string>
+    <string name="pref_keyRemap">Трансляция кнопок</string>
+    <string name="pref_keyRemapSum">Enable to send translated keys to apps, otherwise keymap is for IME only.</string>
+    <string name="pref_spaceOnZero">Пробел на 0</string>
+    <string name="pref_noSoftButtons">Без экранных кнопок</string>
+    <string name="pref_noSoftButtonsSum">Не отображать экранные кнопки, подразумевает \"Пробел на 0\" (Используйте # для смены режима ввода)</string>
+    <string name="candidate_view_add_word">Добавить</string>
+    <string name="hello_world">Привет, мир!</string>
+    <string name="about">О программе</string>
+    <string name="dev_info" translatable="false">QinBoard T9 by A.I.V V5.0</string>
+    <string name="prev">предыдущий</string>
+    <string name="next">следующий</string>
+    <string name="keyboard_Manger">Настройка</string>
+    <string name="help">help.txt</string>
+    <string name="manual">Руководство</string>
+    <string name="keyboard_settings">Использовать QinBoard T9 как способ ввода</string>
+    <string name="IME_default">Использовать как клавиатуру по умолчанию</string>
+
+</resources>
