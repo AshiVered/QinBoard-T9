@@ -28,12 +28,10 @@ Long press  (not working in Qin1S+) : new line.
 |app info|
  -----------
 
-QinBoard T9 V6
+QinBoard T9 V6.1-beta
 developed by A.I.V
 
 WHAT'S NEW?
-* add setup screen.
-* add help screen.
-* Some changes to the user interface, with the hope of creating a more modern user interface. (needs quite a few more changes).
-* fix bugs in hebrew wordlist.
-Setting classic typing (without text prediction) by default, so that it is possible to use the keyboard even before loading the dictionary.
+* Add very big Russian dictionary
+* Add Russian translations
+* Minor changes in Emoji&&Symbols

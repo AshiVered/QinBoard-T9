@@ -110,8 +110,8 @@ android {
 	defaultConfig {
 		minSdkVersion 19
         targetSdk 33
-        versionCode 5
-        versionName 'v5'
+        versionCode 6
+        versionName '6.1'
         applicationId 'aiv.ashivered.qinboard.t9'
     }
 
