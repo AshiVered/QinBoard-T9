@@ -35,3 +35,4 @@ assets/dict.properties
 build*.sh
 R.java
 t9build.properties
+release/output-metadata.json
