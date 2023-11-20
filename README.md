@@ -1,3 +1,5 @@
+![image](https://raw.githubusercontent.com/AshiVered/support-israel-banner/main/assets/support-israel-banner.jpg)
+
 # QinBoard T9 keypad IME for Android.
 (fork of https://github.com/Clam-/TraditionalT9/.)
 
@@ -38,3 +40,4 @@ If you want to support me, [buy me a coffee ☕](https://www.buymeacoffee.com/as
 
 I LOVE ISRAEL.
 Enjoy!
+
