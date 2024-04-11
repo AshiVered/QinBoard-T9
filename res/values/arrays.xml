@@ -18,7 +18,9 @@
 		<item>Français (French)</item>
 		<item>Italiano (Italian)</item>
 		<item>українська (Ukrainian)</item>
-		<item>עברית (Hebrow)</item>		
+		<item>עברית (Hebrew)</item>
+		<item>יידיש (Yidish)</item>
+		<item>العربية (Arabic)</item>
 	</string-array>
 	<!--pref_lang_titles pair with pref_lang_values -->
 	<integer-array translatable="false" name="pref_lang_values">
@@ -28,7 +30,9 @@
 		<item>@integer/LANG_FR</item>
 		<item>@integer/LANG_IT</item>
 		<item>@integer/LANG_UK</item>
-		<item>@integer/LANG_HE</item>		
+		<item>@integer/LANG_HE</item>
+		<item>@integer/LANG_YI</item>
+		<item>@integer/LANG_AR</item>
 	</integer-array>
 
 	<string-array name="capsMode">

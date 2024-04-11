@@ -110,6 +110,58 @@ public class CharMap {
 		heMap.put('+', 0); heMap.put('0', 0);
 
 		CHARTABLE.add(6, Collections.unmodifiableMap(heMap));
+
+// yidish		Map<Character, Integer> yiMap = new HashMap<Character, Integer>();
+		Map<Character, Integer> yiMap = new HashMap<Character, Integer>();
+		yiMap.put('.', 1); yiMap.put(',', 1); yiMap.put('!', 1); yiMap.put('?', 1);
+		yiMap.put('-', 1); yiMap.put('"', 1); yiMap.put('\'', 1); yiMap.put('@', 1);
+		yiMap.put('#', 1); yiMap.put('$', 1); yiMap.put('%', 1); yiMap.put('&', 1);
+		yiMap.put('*', 1); yiMap.put('(', 1); yiMap.put(')', 1); yiMap.put(':', 1);
+		yiMap.put(';', 1); yiMap.put('/', 1); yiMap.put('+', 1); yiMap.put('=', 1);
+		yiMap.put('<', 1); yiMap.put('>', 1); yiMap.put('^', 1); yiMap.put('_', 1);
+		yiMap.put('~', 1); yiMap.put('1', 1);
+		yiMap.put('ד', 2); yiMap.put('ה', 2);
+		yiMap.put('ו', 2); yiMap.put('2', 2);
+		yiMap.put('א', 3); yiMap.put('ב', 3);
+		yiMap.put('ג', 3); yiMap.put('3', 3);
+		yiMap.put('מ', 4); yiMap.put('ם', 4);
+		yiMap.put('נ', 4); yiMap.put('ן', 4); yiMap.put('4', 4);
+		yiMap.put('י', 5);
+		yiMap.put('כ', 5); yiMap.put('ך', 5); yiMap.put('ל', 5); yiMap.put('5', 5);
+		yiMap.put('ז', 6); yiMap.put('ח', 6); yiMap.put('ט', 6); yiMap.put('6', 6);
+		yiMap.put('ר', 7); yiMap.put('ש', 7); yiMap.put('ת', 7); yiMap.put('7', 7);
+		yiMap.put('צ', 8); yiMap.put('ץ', 8); yiMap.put('ק', 8); yiMap.put('8', 8);
+		yiMap.put('ס', 9); yiMap.put('ע', 9); yiMap.put('פ', 9); yiMap.put('ף', 9);
+		yiMap.put('9', 9);
+		yiMap.put('+', 0); yiMap.put('0', 0);
+
+		CHARTABLE.add(7, Collections.unmodifiableMap(yiMap));
+
+		// Arabic		Map<Character, Integer> arMap = new HashMap<Character, Integer>();
+		Map<Character, Integer> arMap = new HashMap<Character, Integer>();
+		arMap.put('.', 1); arMap.put(',', 1); arMap.put('!', 1); arMap.put('?', 1);
+		arMap.put('-', 1); arMap.put('"', 1); arMap.put('\'', 1); arMap.put('@', 1);
+		arMap.put('#', 1); arMap.put('$', 1); arMap.put('%', 1); arMap.put('&', 1);
+		arMap.put('*', 1); arMap.put('(', 1); arMap.put(')', 1); arMap.put(':', 1);
+		arMap.put(';', 1); arMap.put('/', 1); arMap.put('+', 1); arMap.put('=', 1);
+		arMap.put('<', 1); arMap.put('>', 1); arMap.put('^', 1); arMap.put('_', 1);
+		arMap.put('~', 1); arMap.put('1', 1);
+		arMap.put('ب', 2); arMap.put('ت', 2);
+		arMap.put('ة', 2); arMap.put('ث', 2); arMap.put('2', 2);
+		arMap.put('ا', 3); arMap.put('أ', 3);
+		arMap.put('إ', 3); arMap.put('آ', 3); arMap.put('ى', 3); arMap.put('ؤ', 3); arMap.put('ئ', 3); arMap.put('ء', 3); arMap.put('3', 3);
+		arMap.put('س', 4); arMap.put('ش', 4);
+		arMap.put('ص', 4); arMap.put('ض', 4); arMap.put('4', 4);
+		arMap.put('د', 5);
+		arMap.put('ذ', 5); arMap.put('ر', 5); arMap.put('ز', 5); arMap.put('5', 5);
+		arMap.put('ج', 6); arMap.put('ح', 6); arMap.put('خ', 6); arMap.put('6', 6);
+		arMap.put('ن', 7); arMap.put('ه', 7); arMap.put('و', 7); arMap.put('ي', 7); arMap.put('7', 7);
+		arMap.put('ف', 8); arMap.put('ق', 8); arMap.put('ك', 8); arMap.put('ل', 8); arMap.put('م', 8); arMap.put('8', 8);
+		arMap.put('ط', 9); arMap.put('ظ', 9); arMap.put('ع', 9); arMap.put('غ', 9);
+		arMap.put('9', 9);
+		arMap.put('+', 0); arMap.put('0', 0);
+
+		CHARTABLE.add(8, Collections.unmodifiableMap(arMap));
 	}
 
 	protected static final char[][] ENT9TABLE = { { '0', '+' },
@@ -178,7 +230,23 @@ public class CharMap {
 		{ 'צ', 'ץ', 'ק', '8' }, { 'ס', 'ע', 'פ', 'ף', '9' },
 		{ ' ', '\n' }, { ' ', '0', '+' }, { '\n' } }; // LAST TWO SPACE ON 0
 
-	protected static final char[][][] T9TABLE = { ENT9TABLE, RUT9TABLE, DET9TABLE, FRT9TABLE, ITT9TABLE, UKT9TABLE, HET9TABLE };
+	protected static final char[][] YIT9TABLE = { { '0', '+' },
+			{ '.', ',', '?', '!', '"', '/', '-', '@', '$', '%', '&', '*', '#', '(', ')', '_', '1' },
+			{ 'ד', 'ה', 'ו', '2' }, { 'א', 'ב', 'ג', '3' },
+			{ 'מ', 'ם', 'נ', 'ן', '4' }, { 'י', 'כ', 'ך', 'ל', '5' },
+			{ 'ז', 'ח', 'ט', '6' }, { 'ר', 'ש', 'ת', '7' },
+			{ 'צ', 'ץ', 'ק', '8' }, { 'ס', 'ע', 'פ', 'ף', '9' },
+			{ ' ', '\n' }, { ' ', '0', '+' }, { '\n' } }; // LAST TWO SPACE ON 0
+
+	protected static final char[][] ART9TABLE = { { '0', '+' },
+			{ '.', ',', '?', '!', '"', '/', '-', '@', '$', '%', '&', '*', '#', '(', ')', '_', '1' },
+			{ 'ب','ت','ة','ث','2' }, { 'ا','أ','إ','آ','ى','ؤ','ئ','ء', '3' },
+			{ 'س','ش','ص','ض', '4' }, { 'د','ذ','ر','ز', '5' },
+			{ 'ج','ح','خ', '6' }, { 'ن','ه','و','ي', '7' },
+			{ 'ف','ق','ك','ل','م', '8' }, { 'ط','ظ','ع','غ', '9' },
+			{ ' ', '\n' }, { ' ', '0', '+' }, { '\n' } }; // LAST TWO SPACE ON 0
+
+	protected static final char[][][] T9TABLE = { ENT9TABLE, RUT9TABLE, DET9TABLE, FRT9TABLE, ITT9TABLE, UKT9TABLE, HET9TABLE, YIT9TABLE, ART9TABLE };
 
 	// last 2 don't matter, are for spaceOnZero extra 'slots' 0 position, and 10 position
 	protected static final int[] ENT9CAPSTART = { 0, 0, 3, 3, 3, 3, 3, 4, 3, 4, 0,	 0, 0 };
@@ -188,7 +256,9 @@ public class CharMap {
 	protected static final int[] ITT9CAPSTART = { 0, 0, 3, 3, 3, 3, 3, 4, 3, 4, 0,	 0, 0 };
 	protected static final int[] UKT9CAPSTART = { 0, 0, 5, 5, 6, 4, 4, 4, 2, 3, 0,	 0, 0 };
 	protected static final int[] HET9CAPSTART = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,	 0, 0 }; // no CAPS on Hebrew
-	protected static final int[][] T9CAPSTART = {ENT9CAPSTART, RUT9CAPSTART, DET9CAPSTART, FRT9CAPSTART, ITT9CAPSTART, UKT9CAPSTART, HET9CAPSTART};
+	protected static final int[] YIT9CAPSTART = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,	 0, 0 }; // no CAPS on Yidish
+	protected static final int[] ART9CAPSTART = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,	 0, 0 }; // no CAPS on Yidish
+	protected static final int[][] T9CAPSTART = {ENT9CAPSTART, RUT9CAPSTART, DET9CAPSTART, FRT9CAPSTART, ITT9CAPSTART, UKT9CAPSTART, HET9CAPSTART, YIT9CAPSTART, ART9CAPSTART};
 
 	protected static String getStringSequence(String word, LANGUAGE lang) {
 		StringBuilder seq = new StringBuilder();

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="org.nyanya.android.traditionalt9"
     android:versionCode="6"
-    android:versionName="6.1-beta"
+    android:versionName="6.2-beta"
     tools:ignore="ExtraText">
 
     <uses-sdk android:minSdkVersion="8" />

@@ -111,7 +111,7 @@ android {
 		minSdkVersion 19
         targetSdk 33
         versionCode 6
-        versionName '6.1'
+        versionName '6.2'
         applicationId 'aiv.ashivered.qinboard.t9'
     }
 

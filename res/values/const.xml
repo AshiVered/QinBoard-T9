@@ -8,7 +8,10 @@
 	<integer name="LANG_IT">16</integer>
 	<integer name="LANG_UK">32</integer>
 	<integer name="LANG_HE">64</integer>
-	
+	<integer name="LANG_YI">128</integer>
+	<integer name="LANG_AR">256</integer>
+
+
 	<integer name="INPUT_DICT">0</integer>
 	<integer name="INPUT_TEXT">1</integer>
 	<integer name="INPUT_NUM">2</integer>
