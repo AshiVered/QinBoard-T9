@@ -191,6 +191,19 @@ public class CharMap {
 
 		viMap.put('0', 0);
 
+		viMap.put('á', 2); viMap.put('à', 2); viMap.put('ả', 2); viMap.put('ã', 2); viMap.put('ạ', 2);
+		viMap.put('ắ', 2); viMap.put('ằ', 2); viMap.put('ẳ', 2); viMap.put('ẵ', 2); viMap.put('ặ', 2);
+		viMap.put('ấ', 2); viMap.put('ầ', 2); viMap.put('ẩ', 2); viMap.put('ẫ', 2); viMap.put('ậ', 2);
+		viMap.put('é', 3); viMap.put('è', 3); viMap.put('ẻ', 3); viMap.put('ẽ', 3); viMap.put('ẹ', 3);
+		viMap.put('ế', 3); viMap.put('ề', 3); viMap.put('ể', 3); viMap.put('ễ', 3); viMap.put('ệ', 3);
+		viMap.put('í', 4); viMap.put('ì', 4); viMap.put('ỉ', 4); viMap.put('ĩ', 4); viMap.put('ị', 4);
+		viMap.put('ó', 6); viMap.put('ò', 6); viMap.put('ỏ', 6); viMap.put('õ', 6); viMap.put('ọ', 6);
+		viMap.put('ố', 6); viMap.put('ồ', 6); viMap.put('ổ', 6); viMap.put('ỗ', 6); viMap.put('ộ', 6);
+		viMap.put('ớ', 6); viMap.put('ờ', 6); viMap.put('ở', 6); viMap.put('ỡ', 6); viMap.put('ợ', 6);
+		viMap.put('ú', 8); viMap.put('ù', 8); viMap.put('ủ', 8); viMap.put('ũ', 8); viMap.put('ụ', 8);
+		viMap.put('ứ', 8); viMap.put('ừ', 8); viMap.put('ử', 8); viMap.put('ữ', 8); viMap.put('ự', 8);
+		viMap.put('ý', 8); viMap.put('ỳ', 8); viMap.put('ỷ', 8); viMap.put('ỹ', 8); viMap.put('ỵ', 8);
+
 		CHARTABLE.add(9, Collections.unmodifiableMap(viMap));
 	}
 
@@ -303,6 +316,7 @@ public class CharMap {
 			{'ơ', 'ớ', 'ờ', 'ở', 'ỡ', 'ợ'}, {'Ơ', 'Ớ', 'Ờ', 'Ở', 'Ỡ', 'Ợ'},
 			{'u', 'ú', 'ù', 'ủ', 'ũ', 'ụ'}, {'U', 'Ú', 'Ù', 'Ủ', 'Ũ', 'Ụ'},
 			{'ư', 'ứ', 'ừ', 'ử', 'ữ', 'ự'}, {'Ư', 'Ứ', 'Ừ', 'Ử', 'Ữ', 'Ự'},
+			{'y', 'ý', 'ỳ', 'ỷ', 'ỹ', 'ỵ'}, {'Y', 'Ý', 'Ỳ', 'Ỷ', 'Ỹ', 'Ỵ'}
 	};
 
 	protected static final char[][][] T9TABLE = { ENT9TABLE, RUT9TABLE, DET9TABLE, FRT9TABLE, ITT9TABLE, UKT9TABLE, HET9TABLE, YIT9TABLE, ART9TABLE, VIT9TABLE };
