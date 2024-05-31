@@ -21,6 +21,7 @@ import org.nyanya.android.traditionalt9.T9DB.DBSettings.SETTING;
 
 import java.util.AbstractList;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class TraditionalT9 extends InputMethodService implements
@@ -63,6 +64,8 @@ public class TraditionalT9 extends InputMethodService implements
 	// private boolean mAddingSkipInput = false;
 	private int mPrevious;
 	private int mCharIndex;
+	private int viAltIndex = 0;
+	private boolean hasViAltSuggestion = false;
 
 	private String mPreviousWord = "";
 
@@ -576,7 +579,22 @@ public class TraditionalT9 extends InputMethodService implements
 				}
 			}
 			onKey(KeyEvent.KEYCODE_DEL, null);
+			// remove vietnamese suggestion on delete
+			hasViAltSuggestion = false;
 			return true;
+		} else if (keyCode == KeyEvent.KEYCODE_STAR && mLang.id == LANGUAGE.VI.id) {
+			if (hasViAltSuggestion) {
+				mCandidateView.scrollSuggestion(1);
+				if (!(noSoftButtons && isAddWordOptionSelected()) && mSuggestionStrings.size() > mCandidateView.mSelectedIndex)
+					currentInputConnection.setComposingText(mSuggestionStrings.get(mCandidateView.mSelectedIndex), 1);
+			} else {
+				Log.d("onKeyDown", "NO VIETNAMESE SUGGESTION");
+//				commitTyped();
+			}
+			return true;
+		} else {
+			// remove vietnamese suggestion new key
+			hasViAltSuggestion = false;
 		}
 
 		// only handle first press except for delete
@@ -914,6 +932,8 @@ public class TraditionalT9 extends InputMethodService implements
 			// change case
 			if (mKeyMode == MODE_NUM) {
 				handleCharacter(KeyEvent.KEYCODE_STAR);
+			} else if (mLang.id == LANGUAGE.VI.id && mComposing.length() > 0) {
+				handleCharacter(keyCode);
 			} else {
 				handleShift();
 			}
@@ -999,9 +1019,9 @@ public class TraditionalT9 extends InputMethodService implements
 	 * Do a lot of complicated stuffs.
 	 */
 	private void updateCandidates() {
-		updateCandidates(false);
+		updateCandidates(false, false);
 	}
-	private void updateCandidates(boolean backspace) {
+	private void updateCandidates(boolean backspace, boolean star) {
 		if (mKeyMode == MODE_LANG) {
 			int len = mComposingI.length();
 			if (len > 0) {
@@ -1068,15 +1088,35 @@ public class TraditionalT9 extends InputMethodService implements
 			}
 		} else if (mKeyMode == MODE_TEXT) {
 			if (mComposing.length() > 0) {
-				//Log.d("updateCandidates", "Previous: " + mComposing.toString());
 				mSuggestionStrings.clear();
-
 				char[] ca = CharMap.T9TABLE[mLang.index][mPrevious];
+
+				if (mLang.id == LANGUAGE.VI.id && star) {
+					String prev = mComposing.toString();
+					hasViAltSuggestion = false;
+					for (int i = 0; i < CharMap.VIALT.length; i++) {
+						for (char c : CharMap.VIALT[i]) {
+							if (String.valueOf(c).equals(prev)) {
+								hasViAltSuggestion = true;
+								break;
+							}
+						}
+						if (hasViAltSuggestion) {
+							ca = Arrays.copyOfRange(CharMap.VIALT[i], 1, CharMap.VIALT[i].length);;
+							break;
+						}
+					}
+					if (ca.length == 0 || !hasViAltSuggestion) {
+						setSuggestions(null, -1);
+						setCandidatesViewShown(false);
+						return;
+					}
+				}
+
 				for (char c : ca) {
 					mSuggestionStrings.add(String.valueOf(c));
 				}
 				setSuggestions(mSuggestionStrings, mCharIndex);
-				//Log.d("updateCandidates", "newSuggestedIndex: " + mCharIndex);
 			} else {
 				setSuggestions(null, -1);
 			}
@@ -1120,7 +1160,7 @@ public class TraditionalT9 extends InputMethodService implements
 			} else {
 				mPreviousWord = "";
 			}
-			updateCandidates(true);
+			updateCandidates(true, false);
 			currentInputConnection.setComposingText(mComposing, 1);
 		} else if (length > 0 || length2 > 0) {
 			//Log.d("handleBS", "resetting thing");
@@ -1191,7 +1231,35 @@ public class TraditionalT9 extends InputMethodService implements
 				t9releasehandler.removeCallbacks(mt9release);
 				if (keyCode == KeyEvent.KEYCODE_POUND) {
 					keyCode = 10;
+				} else if (mLang.id == LANGUAGE.VI.id && mComposing.length() > 0 && keyCode == KeyEvent.KEYCODE_STAR) {
+					mCharIndex = 0;
+					viAltIndex++;
+
+					String prev = mComposing.toString();
+					char[] suggestMap = {};
+					for (int i = 0; i < CharMap.VIALT.length; i++) {
+						if (prev.equals(String.valueOf(CharMap.VIALT[i][0]))) {
+							suggestMap = CharMap.VIALT[i];
+							break;
+						}
+					}
+					if (suggestMap.length == 0) {
+						break;
+					}
+					if (viAltIndex >= suggestMap.length) {
+						viAltIndex = 0;
+					}
+					mComposing.setLength(0);
+					mComposingI.setLength(0);
+					mComposing.append(suggestMap[viAltIndex]);
+
+					currentInputConnection.setComposingText(mComposing, 1);
+					t9releasehandler.postDelayed(mt9release, T9DELAY);
+					updateShiftKeyState(getCurrentInputEditorInfo());
+					updateCandidates(false, true);
+					break;
 				} else {
+					Log.d("handleChar", "Key: " + keyCode);
 					keyCode = keyCode - KeyEvent.KEYCODE_0;
 				}
 				// special translation of that keyCode (which is now T9TABLE index
@@ -1212,6 +1280,7 @@ public class TraditionalT9 extends InputMethodService implements
 					// updateShiftKeyState(getCurrentInputEditorInfo());
 					newChar = true;
 					mCharIndex = 0;
+					viAltIndex = 0;
 					mPrevious = keyCode;
 				}
 

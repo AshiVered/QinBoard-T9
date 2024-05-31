@@ -10,6 +10,7 @@
 	<integer name="LANG_HE">64</integer>
 	<integer name="LANG_YI">128</integer>
 	<integer name="LANG_AR">256</integer>
+	<integer name="LANG_VI">512</integer>
 
 
 	<integer name="INPUT_DICT">0</integer>
