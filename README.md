@@ -28,9 +28,11 @@ TraditionalT9 (orginal project):
 available on Google Play: [Traditional T9 Keypad IME](https://play.google.com/store/apps/details?id=org.nyanya.android.traditionalt9)
 # License
 Do what you want, but keep the following in mind:
-1. The application icon.
-2. Name of the application (QinBoard T9).
-3. "Developed By A.I.V" in the application settings.
+1. **Commercial use is prohibited.** If you want to make commercial use, contact me.
+2. The application icon.
+3. Name of the application (QinBoard T9).
+4. "Developed By A.I.V" in the application settings.
+5. Do not change the terms of the license
 
 # Support me
 I develop this project voluntarily, to benefit the community. But it's not an easy job with a lot of investment...
