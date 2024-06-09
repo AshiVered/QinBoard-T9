@@ -409,7 +409,8 @@ public class TraditionalT9Settings extends ListActivity implements
 						rpl.addMsg("User cancelled.");
 						break;
 					}
-					if (word.contains(" ")) {
+					// vietnamese has spaces so ignore
+					if (word.contains(" ") && lang != LANGUAGE.VI) {
 						ws = word.split(" ");
 						word = ws[0];
 						try {

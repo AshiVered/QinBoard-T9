@@ -21,6 +21,7 @@
 		<item>עברית (Hebrew)</item>
 		<item>יידיש (Yidish)</item>
 		<item>العربية (Arabic)</item>
+		<item>Tiếng Việt (Vietnamese)</item>
 	</string-array>
 	<!--pref_lang_titles pair with pref_lang_values -->
 	<integer-array translatable="false" name="pref_lang_values">
@@ -33,6 +34,7 @@
 		<item>@integer/LANG_HE</item>
 		<item>@integer/LANG_YI</item>
 		<item>@integer/LANG_AR</item>
+		<item>@integer/LANG_VI</item>
 	</integer-array>
 
 	<string-array name="capsMode">

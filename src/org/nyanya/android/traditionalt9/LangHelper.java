@@ -10,13 +10,14 @@ public class LangHelper {
 	protected static final Locale HEBREW = new Locale("he","IL");
 	protected static final Locale YIDISH = new Locale("yi","IL");
 	protected static final Locale ARABIC = new Locale("ar","JO");
+	protected static final Locale VIETNAMESE = new Locale("vi","VN");
 	public enum LANGUAGE {
 		// MAKE SURE THESE MATCH WITH values/const.xml
 		// (index, id) Where index is index in arrays like LOCALES and MUST increment and MUST be in
 		// the same order as arrays.xml/pref_lang_values, and id is the identifier used in
 		// the database and such. id should never change unless database update is done.
 		// id MUST increment in doubles (as the enabled languages are stored as an integer)
-		NONE(-1, -1), EN(0,1), RU(1,2), DE(2,4), FR(3,8), IT(4,16), UK(5,32), HE(6,64), YI(7,128), AR(8,256);
+		NONE(-1, -1), EN(0,1), RU(1,2), DE(2,4), FR(3,8), IT(4,16), UK(5,32), HE(6,64), YI(7,128), AR(8,256), VI(9,512);
 		public final int index;
 		public final int id;
 		// lookup map
@@ -29,7 +30,7 @@ public class LangHelper {
 		public static LANGUAGE get(int i) { return lookup.get(i);}
 	}
 
-	protected static final Locale[] LOCALES = {Locale.ENGLISH, RUSSIAN, Locale.GERMAN, Locale.FRENCH, Locale.ITALIAN, UKRAINIAN, HEBREW, YIDISH, ARABIC};
+	protected static final Locale[] LOCALES = {Locale.ENGLISH, RUSSIAN, Locale.GERMAN, Locale.FRENCH, Locale.ITALIAN, UKRAINIAN, HEBREW, YIDISH, ARABIC, VIETNAMESE};
 
 	public static final int LANG_DEFAULT = LANGUAGE.EN.id;
 
@@ -101,6 +102,12 @@ public class LangHelper {
 						// Arabic has no lowercase/uppercase so at the moment all images are identical
 						{R.drawable.ime_ar_text_lower, R.drawable.ime_ar_text_lower, R.drawable.ime_ar_text_lower},
 						{R.drawable.ime_ar_lang_lower, R.drawable.ime_ar_text_lower, R.drawable.ime_ar_text_lower},
+						{R.drawable.ime_number},
+				},
+				{
+						// Vietnamese resources
+						{R.drawable.ime_vi_lang_lower, R.drawable.ime_vi_lang_single, R.drawable.ime_vi_lang_upper},
+						{R.drawable.ime_vi_text_lower, R.drawable.ime_vi_text_single, R.drawable.ime_vi_text_upper},
 						{R.drawable.ime_number},
 				},
 	    };

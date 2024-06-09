@@ -41,7 +41,7 @@
     <string name="pref_github">Github</string>
     <string name="pref_loaddict">Load dictionary</string>
     <string name="pref_loaduserdict">Load user dictionary</string>
-    <string name="pref_loaduserdictdesc">internal storage/QinBoardT9/user.lang.dict (lang: en/ru/de/fr/it/uk/he/yi/ar)</string>
+    <string name="pref_loaduserdictdesc">internal storage/QinBoardT9/user.lang.dict (lang: en/ru/de/fr/it/uk/he/yi/ar/vi)</string>
     <string name="pref_nukedict">Nuke dictionary</string>
     <string name="pref_backupdict">Backup dictionary</string>
     <string name="pref_restoredict">Restore dictionary</string>

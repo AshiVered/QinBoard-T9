@@ -162,6 +162,49 @@ public class CharMap {
 		arMap.put('+', 0); arMap.put('0', 0);
 
 		CHARTABLE.add(8, Collections.unmodifiableMap(arMap));
+
+		// Vietnamese
+		Map<Character, Integer> viMap = new HashMap<Character, Integer>();
+		viMap.put('.', 1); viMap.put(',', 1); viMap.put('!', 1); viMap.put('?', 1);
+		viMap.put('-', 1); viMap.put('"', 1); viMap.put('\'', 1); viMap.put('@', 1);
+		viMap.put('#', 1); viMap.put('$', 1); viMap.put('%', 1); viMap.put('&', 1);
+		viMap.put('*', 1); viMap.put('(', 1); viMap.put(')', 1); viMap.put(':', 1);
+		viMap.put(';', 1); viMap.put('/', 1); viMap.put('+', 1); viMap.put('=', 1);
+		viMap.put('<', 1); viMap.put('>', 1); viMap.put('^', 1); viMap.put('_', 1);
+		viMap.put('~', 1); viMap.put('1', 1);
+
+		viMap.put('a', 2); viMap.put('ă', 2); viMap.put('â', 2); viMap.put('b', 2); viMap.put('c', 2);
+
+		viMap.put('d', 3); viMap.put('đ', 3); viMap.put('e', 3); viMap.put('ê', 3); viMap.put('f', 3);
+
+		viMap.put('g', 4); viMap.put('h', 4); viMap.put('i', 4);
+
+		viMap.put('j', 5); viMap.put('k', 5); viMap.put('l', 5);
+
+		viMap.put('m', 6); viMap.put('n', 6); viMap.put('o', 6); viMap.put('ô', 6); viMap.put('ơ', 6);
+
+		viMap.put('p', 7); viMap.put('q', 7); viMap.put('r', 7); viMap.put('s', 7);
+
+		viMap.put('t', 8); viMap.put('u', 8); viMap.put('ư', 8); viMap.put('v', 8);
+
+		viMap.put('w', 9); viMap.put('x', 9); viMap.put('y', 9); viMap.put('z', 9);
+
+		viMap.put('0', 0);
+
+		viMap.put('á', 2); viMap.put('à', 2); viMap.put('ả', 2); viMap.put('ã', 2); viMap.put('ạ', 2);
+		viMap.put('ắ', 2); viMap.put('ằ', 2); viMap.put('ẳ', 2); viMap.put('ẵ', 2); viMap.put('ặ', 2);
+		viMap.put('ấ', 2); viMap.put('ầ', 2); viMap.put('ẩ', 2); viMap.put('ẫ', 2); viMap.put('ậ', 2);
+		viMap.put('é', 3); viMap.put('è', 3); viMap.put('ẻ', 3); viMap.put('ẽ', 3); viMap.put('ẹ', 3);
+		viMap.put('ế', 3); viMap.put('ề', 3); viMap.put('ể', 3); viMap.put('ễ', 3); viMap.put('ệ', 3);
+		viMap.put('í', 4); viMap.put('ì', 4); viMap.put('ỉ', 4); viMap.put('ĩ', 4); viMap.put('ị', 4);
+		viMap.put('ó', 6); viMap.put('ò', 6); viMap.put('ỏ', 6); viMap.put('õ', 6); viMap.put('ọ', 6);
+		viMap.put('ố', 6); viMap.put('ồ', 6); viMap.put('ổ', 6); viMap.put('ỗ', 6); viMap.put('ộ', 6);
+		viMap.put('ớ', 6); viMap.put('ờ', 6); viMap.put('ở', 6); viMap.put('ỡ', 6); viMap.put('ợ', 6);
+		viMap.put('ú', 8); viMap.put('ù', 8); viMap.put('ủ', 8); viMap.put('ũ', 8); viMap.put('ụ', 8);
+		viMap.put('ứ', 8); viMap.put('ừ', 8); viMap.put('ử', 8); viMap.put('ữ', 8); viMap.put('ự', 8);
+		viMap.put('ý', 8); viMap.put('ỳ', 8); viMap.put('ỷ', 8); viMap.put('ỹ', 8); viMap.put('ỵ', 8);
+
+		CHARTABLE.add(9, Collections.unmodifiableMap(viMap));
 	}
 
 	protected static final char[][] ENT9TABLE = { { '0', '+' },
@@ -246,7 +289,37 @@ public class CharMap {
 			{ 'ف','ق','ك','ل','م', '8' }, { 'ط','ظ','ع','غ', '9' },
 			{ ' ', '\n' }, { ' ', '0', '+' }, { '\n' } }; // LAST TWO SPACE ON 0
 
-	protected static final char[][][] T9TABLE = { ENT9TABLE, RUT9TABLE, DET9TABLE, FRT9TABLE, ITT9TABLE, UKT9TABLE, HET9TABLE, YIT9TABLE, ART9TABLE };
+	protected static final char[][] VIT9TABLE = {
+			{'0', '+'},
+			{'.', ',', '?', '!', '"', '/', '-', '@', '$', '%', '&', '*', '#', '(', ')', '_', '1'},
+			{'a', 'ă', 'â', 'b', 'c', 'A', 'Ă', 'Â', 'B', 'C', '2'},
+			{'d', 'đ', 'e', 'ê', 'f', 'D', 'Đ', 'E', 'Ê', 'F', '3'},
+			{'g', 'h', 'i', 'G', 'H', 'I', '4'},
+			{'j', 'k', 'l', 'J', 'K', 'L', '5'},
+			{'m', 'n', 'o', 'ô', 'ơ', 'M', 'N', 'O', 'Ô', 'Ơ', '6'},
+			{'p', 'q', 'r', 's', 'P', 'Q', 'R', 'S', '7'},
+			{'t', 'u', 'ư', 'v', 'T', 'U', 'Ư', 'V', '8'},
+			{'w', 'x', 'y', 'z', 'W', 'X', 'Y', 'Z', '9'},
+			{' ', '\n'}, {' ', '0', '+'}, {'\n'}
+	}; // LAST TWO SPACE ON 0
+
+	protected static final char[][] VIALT = {
+			{'a', 'á', 'à', 'ả', 'ã', 'ạ'}, {'A', 'Á', 'À', 'Ả', 'Ã', 'Ạ'},
+			{'ă', 'ắ', 'ằ', 'ẳ', 'ẵ', 'ặ'}, {'Ă', 'Ắ', 'Ằ', 'Ẳ', 'Ẵ', 'Ặ'},
+			{'â', 'ấ', 'ầ', 'ẩ', 'ẫ', 'ậ'}, {'Â', 'Ấ', 'Ầ', 'Ẩ', 'Ẫ', 'Ậ'},
+			{'e', 'é', 'è', 'ẻ', 'ẽ', 'ẹ'}, {'E', 'É', 'È', 'Ẻ', 'Ẽ', 'Ẹ'},
+			{'ê', 'ế', 'ề', 'ể', 'ễ', 'ệ'}, {'Ê', 'Ế', 'Ề', 'Ể', 'Ễ', 'Ệ'},
+			{'i', 'í', 'ì', 'ỉ', 'ĩ', 'ị'}, {'I', 'Í', 'Ì', 'Ỉ', 'Ĩ', 'Ị'},
+			{'o', 'ó', 'ò', 'ỏ', 'õ', 'ọ'}, {'O', 'Ó', 'Ò', 'Ỏ', 'Õ', 'Ọ'},
+			{'ê', 'ế', 'ề', 'ể', 'ễ', 'ệ'}, {'Ê', 'Ế', 'Ề', 'Ể', 'Ễ', 'Ệ'},
+			{'ô', 'ố', 'ồ', 'ổ', 'ỗ', 'ộ'}, {'Ô', 'Ố', 'Ồ', 'Ổ', 'Ỗ', 'Ộ'},
+			{'ơ', 'ớ', 'ờ', 'ở', 'ỡ', 'ợ'}, {'Ơ', 'Ớ', 'Ờ', 'Ở', 'Ỡ', 'Ợ'},
+			{'u', 'ú', 'ù', 'ủ', 'ũ', 'ụ'}, {'U', 'Ú', 'Ù', 'Ủ', 'Ũ', 'Ụ'},
+			{'ư', 'ứ', 'ừ', 'ử', 'ữ', 'ự'}, {'Ư', 'Ứ', 'Ừ', 'Ử', 'Ữ', 'Ự'},
+			{'y', 'ý', 'ỳ', 'ỷ', 'ỹ', 'ỵ'}, {'Y', 'Ý', 'Ỳ', 'Ỷ', 'Ỹ', 'Ỵ'}
+	};
+
+	protected static final char[][][] T9TABLE = { ENT9TABLE, RUT9TABLE, DET9TABLE, FRT9TABLE, ITT9TABLE, UKT9TABLE, HET9TABLE, YIT9TABLE, ART9TABLE, VIT9TABLE };
 
 	// last 2 don't matter, are for spaceOnZero extra 'slots' 0 position, and 10 position
 	protected static final int[] ENT9CAPSTART = { 0, 0, 3, 3, 3, 3, 3, 4, 3, 4, 0,	 0, 0 };
@@ -258,7 +331,8 @@ public class CharMap {
 	protected static final int[] HET9CAPSTART = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,	 0, 0 }; // no CAPS on Hebrew
 	protected static final int[] YIT9CAPSTART = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,	 0, 0 }; // no CAPS on Yidish
 	protected static final int[] ART9CAPSTART = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,	 0, 0 }; // no CAPS on Yidish
-	protected static final int[][] T9CAPSTART = {ENT9CAPSTART, RUT9CAPSTART, DET9CAPSTART, FRT9CAPSTART, ITT9CAPSTART, UKT9CAPSTART, HET9CAPSTART, YIT9CAPSTART, ART9CAPSTART};
+	protected static final int[] VIT9CAPSTART = { 0, 0, 5, 5, 3, 3, 5, 4, 4, 4, 0,	 0, 0 };
+	protected static final int[][] T9CAPSTART = {ENT9CAPSTART, RUT9CAPSTART, DET9CAPSTART, FRT9CAPSTART, ITT9CAPSTART, UKT9CAPSTART, HET9CAPSTART, YIT9CAPSTART, ART9CAPSTART, VIT9CAPSTART};
 
 	protected static String getStringSequence(String word, LANGUAGE lang) {
 		StringBuilder seq = new StringBuilder();

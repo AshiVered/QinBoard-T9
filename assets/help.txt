@@ -32,6 +32,4 @@ QinBoard T9 V6.1-beta
 developed by A.I.V
 
 WHAT'S NEW?
-* Add very big Russian dictionary
-* Add Russian translations
-* Minor changes in Emoji&&Symbols
+* Add Vietnamese
