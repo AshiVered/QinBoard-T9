@@ -19,17 +19,27 @@ Scroll suggestions right
 Star (*):
 Short press: switch mode (uppercase and lowercase letters).
 Long press: add symbol or smiley.
+in Vietnamese lang:
+Special Characters.
+e.g.:
+
+    (a) + (*) = (á)
+
 
 Hash/Pound (#):
 Short press: change lang (if more than one language is selected).
 Long press  (not working in Qin1S+) : new line.
 
+Call key:
+Change input modes (dictionary, text, numbers)
+
  -----------
 |app info|
  -----------
 
-QinBoard T9 V6.1-beta
+QinBoard T9 V7
 developed by A.I.V
 
 WHAT'S NEW?
 * Add Vietnamese
+* Change action of call key

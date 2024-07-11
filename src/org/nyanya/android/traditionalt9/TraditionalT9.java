@@ -624,10 +624,16 @@ public class TraditionalT9 extends InputMethodService implements
 			event.startTracking();
 			return true;
 		} else if (keyCode == KeyEvent.KEYCODE_CALL) {
-				mCandidateView.scrollSuggestion(1);
-			if (!(noSoftButtons && isAddWordOptionSelected())&&mSuggestionStrings.size() > mCandidateView.mSelectedIndex)
-				currentInputConnection.setComposingText(mSuggestionStrings.get(mCandidateView.mSelectedIndex), 1);
-			return true;
+			if (mKeyMode == MODE_LANG) {
+				mKeyMode = MODE_TEXT;
+				Toast.makeText(this, R.string.text, Toast.LENGTH_SHORT).show();
+			} else if (mKeyMode == MODE_TEXT) {
+				mKeyMode = MODE_NUM;
+				Toast.makeText(this, R.string.numbers, Toast.LENGTH_SHORT).show();
+			}  else if (mKeyMode == MODE_NUM) {
+				mKeyMode = MODE_LANG;
+				Toast.makeText(this, R.string.dictionary, Toast.LENGTH_SHORT).show();
+			}
 
 		} else if (keyCode == KeyEvent.KEYCODE_0 || keyCode == KeyEvent.KEYCODE_1 || keyCode == KeyEvent.KEYCODE_2 ||
 				keyCode == KeyEvent.KEYCODE_3 || keyCode == KeyEvent.KEYCODE_4 || keyCode == KeyEvent.KEYCODE_5 ||

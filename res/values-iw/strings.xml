@@ -89,6 +89,9 @@
 	<string name="manual">מדריך למשתמש</string>
 	<string name="keyboard_settings">הפעל את Qinboard T9 כשיטת קלט</string>
 	<string name="IME_default">הגדר כמקלדת ברירת מחדל</string>
+    <string name="text">טקסט</string>
+	<string name="numbers">מספרים</string>
+	<string name="dictionary">חיזוי</string>
 
 
 </resources>

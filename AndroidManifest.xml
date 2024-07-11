@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="org.nyanya.android.traditionalt9"
-    android:versionCode="6"
-    android:versionName="6.2-beta"
+    android:versionCode="7"
+    android:versionName="7"
     tools:ignore="ExtraText">
 
     <uses-sdk android:minSdkVersion="8" />

@@ -89,5 +89,6 @@
     <string name="manual">Руководство</string>
     <string name="keyboard_settings">Использовать QinBoard T9 как способ ввода</string>
     <string name="IME_default">Использовать как клавиатуру по умолчанию</string>
+    <string name="text">Text</string>
 
 </resources>

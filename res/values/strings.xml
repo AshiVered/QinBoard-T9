@@ -89,5 +89,8 @@
     <string name="manual">Manual</string>
     <string name="keyboard_settings">Enable Qinboard T9 as input method</string>
     <string name="IME_default">Set as default keyboard</string>
+    <string name="text">Text</string>
+    <string name="numbers">Numbers</string>
+    <string name="dictionary">Dictionary</string>
 
 </resources>
