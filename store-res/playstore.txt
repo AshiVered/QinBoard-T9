@@ -16,7 +16,7 @@ T9 predictive text input using your phone keypad! (English, Russian, German & Fr
 
 
 What's new in this version?
-New language support (German, French)
+New language support (Vietnamese)
 Other fixes and modifications.
 
 See github for commit history and other history info.
