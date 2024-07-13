@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="help_url" translatable="false">https://github.com/AshiVered/QinBoard-T9/</string>
+    <string name="app_name">QinBoard T9</string>
+    <string name="ime_name">QinBoard T9</string>
+    <string name="ime_number">Số</string>
+    <string name="pref_inputmode">Chế độ nhập mặc định</string>
+    <string name="pref_inputmode_desc">Chế độ nhập thông thường</string>
+    <string name="traditionalt9_settings">Cài đặt QinBoard T9</string>
+    <string name="main_left_insert">Thêm ký tự</string>
+    <string name="main_left_addword">Thêm từ</string>
+    <string name="main_mid">Xong</string>
+    <string name="main_mid_commit">Chọn</string>
+    <string name="main_right_upper">Chuyển chế độ</string>
+    <string name="main_right_lower">Tuỳ chọn</string>
+    <string name="main_left_notfound">Thêm từ?</string>
+    <string name="ricon_desc">Hold Icon</string>
+    <string name="symbol_next">Trang sau</string>
+    <string name="symbol_prev">Trang trước</string>
+    <string name="symbol_insert">Thêm biểu tượng</string>
+    <string name="smiley_insert">Thêm biểu cảm</string>
+    <string name="symbol_page">Trang: %1$s/%2$s</string>
+
+    <string name="add_word">Thêm từ</string>
+    <string name="close">Đóng</string>
+    <string name="add_word_blank">Không thêm từ trống</string>
+    <string name="add_word_badchar">Lỗi khi liên kết từ %1$s (%2$s).</string>
+    <string name="add_word_exist1">Từ (%1$s) đã tồn tại.</string>
+    <string name="add_word_exist2">Từ (%1$s) đã tồn tại trùng với %2$s.</string>
+    <string name="title_activity_add_word">Thêm từ</string>
+    <string name="action_settings">Cài đặt</string>
+    <string name="database_notready">Lỗi CSDL</string>
+    <string name="database_settings_notready">Lỗi CSDL, đang dùng giá trị mặc định</string>
+
+    <string name="updating_database_title">Đang cập nhật dữ liệu từ điển...</string>
+    <string name="updating_database">Đang cập nhật dữ liệu từ điển, chờ chút nha...</string>
+    <string name="updating_database_done">Cập nhật dữ liệu từ điển thành công.</string>
+    <string name="updating_database_unavailable">Đang cập nhật dữ liệu từ điển...</string>
+
+    <string name="pref_lang_title">Ngôn ngữ nhập</string>
+    <string name="pref_github">Github</string>
+    <string name="pref_loaddict">Tải từ điển</string>
+    <string name="pref_loaduserdict">Tải từ điển cá nhân</string>
+    <string name="pref_loaduserdictdesc">internal storage/QinBoardT9/user.lang.dict (lang: en/ru/de/fr/it/uk/he/yi/ar/vi)</string>
+    <string name="pref_nukedict">Đặt lại từ điển</string>
+    <string name="pref_backupdict">Sao lưu từ điển</string>
+    <string name="pref_restoredict">Khôi phục từ điển</string>
+    <string name="pref_querytest">Query test</string>
+    <string name="pref_testfunc">Test func</string>
+
+    <string name="pref_mode_notify">Thông báo chế độ</string>
+    <string name="pref_mode_notify_subtitle">Dùng khi thay đổi chế độ</string>
+
+    <string name="pref_loadingdict">Đang tải từ điển...</string>
+    <string name="pref_loadinguserdict">Đang tải từ điển cá nhân...</string>
+    <string name="pref_load_title">Tải từ điển IME</string>
+    <string name="pref_loadingbackup">Đang khôi phục từ điển...</string>
+    <string name="pref_savingbackup">Đang sao lưu từ điển...</string>
+    <string name="pref_nukingdict">Đang xoá từ điển...chờ chút nha...</string>
+    <string name="pref_loaduser_notfound">Không tìm thấy từ điển %1$s. Bỏ qua.</string>
+
+    <string name="pref_backup_warn">Cảnh báo: Đã tồn tại bản sao lưu cơ sở dữ liệu. Bạn có muốn ghi đè không?</string>
+    <string name="pref_backup_title">Sao lưu từ điển IME</string>
+    <string name="pref_backup_noext">Lỗi: Không có bộ nhớ ngoài để sao lưu. Sao lưu sẽ không tiếp tục.</string>
+    <string name="pref_restore_warn">Các mục cơ sở dữ liệu sao lưu sẽ ghi đè lên các mục cơ sở dữ liệu hiện có. Các mục không có trong bản sao lưu sẽ được giữ lại. Nếu đó không phải là hành vi mong muốn, hãy chọn \"%1$s\" trước khi chọn tùy chọn này.</string>
+    <string name="pref_restore_title">Khôi phục từ điển IME</string>
+    <string name="pref_restore_noext">Lỗi: Không có bộ nhớ ngoài để khôi phục. Khôi phục sẽ không tiếp tục.</string>
+    <string name="pref_restore_nofile">Lỗi: Không tìm thấy tập tin sao lưu.</string>
+    <string name="pref_nuke_warn">Cảnh báo: Thao tác này sẽ xóa toàn bộ từ điển của bạn. Bạn có muốn tiếp tục không?</string>
+    <string name="pref_nuke_title">Đặt lại từ điển IME</string>
+    <string name="pref_reloadKeys">Tải lại cấu hình phím</string>
+    <string name="pref_reloadKeysSum">Cố tải lại cấu hình phím</string>
+    <string name="pref_reloadKeysDone">Tải lại thành công.</string>
+    <string name="pref_reloadKeysDoneWE">Tải lại thành công nhưng có lỗi (xem logcat.)</string>
+    <string name="pref_reloadKeysNoFile">Không tìm thấy file keymap.txt</string>
+    <string name="pref_keyRemap">Đổi cấu hình nút</string>
+    <string name="pref_keyRemapSum">Cho phép dùng nút riêng tới ứng dụng khác, nếu không thì sơ đồ bàn phím chỉ dành cho IME.</string>
+    <string name="pref_spaceOnZero">Dấu cách ở phím 0</string>
+    <string name="pref_noSoftButtons">Không hiện phím ảo</string>
+    <string name="pref_noSoftButtonsSum">Không hiện phím ảo, dùng dấu cách ở phím 0, đổi chế độ nhập bằng phím #</string>
+    <string name="candidate_view_add_word">Thêm</string>
+    <string name="hello_world">Xin chào Đức!</string>
+    <string name="about">Giới thiệu</string>
+    <string name="dev_info" translatable="false">QinBoard T9 by A.I.V V5.0</string>
+    <string name="prev">trước</string>
+    <string name="next">sau</string>
+    <string name="keyboard_Manger">Cài đặt</string>
+    <string name="help">help.txt</string>
+    <string name="manual">Hướng dẫn</string>
+    <string name="keyboard_settings">Bật QinBoard T9</string>
+    <string name="IME_default">Set as default keyboard</string>
+    <string name="text">Văn bản</string>
+    <string name="numbers">Số</string>
+    <string name="dictionary">Từ điển</string>
+
+</resources>
