@@ -38,7 +38,7 @@ Do what you want, but keep the following in mind:
 
 # Support me
 I develop this project voluntarily, to benefit the community. But it's not an easy job with a lot of investment...
-If you want to support me, [buy me a coffee ☕](https://www.buymeacoffee.com/ashivered)
+If you want to support me, [buy me a coffee ☕](https://www.ko-fi.com/ashivered)
 
 
 
